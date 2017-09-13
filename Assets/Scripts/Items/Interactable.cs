@@ -49,14 +49,13 @@ public class Interactable : Clickable {
 		}
 	}
 
-	void OnMouseEnter()
-	{
-		GUI_Manager.Instance.UpdateText(verb () + object_name);
+	void OnMouseExit () {
+		GUI_Manager.Instance.UpdateText("");
 	}
 
-	void OnMouseExit()
+	protected override void Hovering()
 	{
-		GUI_Manager.Instance.UpdateText("");
+		GUI_Manager.Instance.UpdateText(verb () + object_name);
 	}
 
 	public void change_state (int s){

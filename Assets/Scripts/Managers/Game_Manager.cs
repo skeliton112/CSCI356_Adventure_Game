@@ -28,9 +28,11 @@ public class Game_Manager {
 	public void Select_Item (Item i){
 		item = i;
 		has_selection = true;
+		GUI_Manager.Instance.inventory_update ();
 	}
 	public void Deselect_Item () {
 		has_selection = false;
+		GUI_Manager.Instance.inventory_update ();
 	}
 
 	//Input wrapper
