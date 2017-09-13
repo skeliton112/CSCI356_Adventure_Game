@@ -1,0 +1,24 @@
+﻿<Properties StartupItem="Assembly-CSharp.csproj">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Managers\GUI_Manager.cs">
+    <Files>
+      <File FileName="Assets\Scripts\Managers\Game_Manager.cs" Line="32" Column="32" />
+      <File FileName="Assets\Scripts\Managers\Player_Manager.cs" Line="44" Column="15" />
+      <File FileName="Assets\Scripts\Items\Walker.cs" Line="6" Column="2" />
+      <File FileName="Assets\Scripts\Items\Interactable.cs" Line="74" Column="47" />
+      <File FileName="Assets\Scripts\Managers\WalkSystem.cs" Line="455" Column="6" />
+      <File FileName="Assets\Scripts\Items\Walkable.cs" Line="14" Column="1" />
+      <File FileName="Assets\Scripts\Initialiser.cs" Line="11" Column="47" />
+      <File FileName="Assets\Scripts\Items\State Reactors\Kill On State Enter.cs" Line="18" Column="30" />
+      <File FileName="Assets\Scripts\Managers\GUI_Manager.cs" Line="7" Column="2" />
+      <File FileName="Assets\Scripts\GUI Scripts\Dialogue_Printer.cs" Line="3" Column="19" />
+      <File FileName="Assets\Scripts\GUI Scripts\Inventory_Item.cs" Line="37" Column="66" />
+      <File FileName="Assets\Scripts\Utility\enums.cs" Line="8" Column="39" />
+      <File FileName="Assets\Scripts\Items\Clickable.cs" Line="14" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>
