@@ -1,6 +1,6 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Graphic Effects\Sobel.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Shaders\Sobel.shader">
     <Files>
       <File FileName="Assets\Scripts\Items\Clickable.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\Items\Interactable.cs" Line="1" Column="1" />
@@ -9,6 +9,8 @@
       <File FileName="Assets\Scripts\Managers\Player_Manager.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\Managers\WalkSystem.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\Graphic Effects\Sobel.cs" Line="12" Column="2" />
+      <File FileName="Assets\Shaders\Render_normals.shader" Line="27" Column="30" />
+      <File FileName="Assets\Shaders\Sobel.shader" Line="77" Column="44" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

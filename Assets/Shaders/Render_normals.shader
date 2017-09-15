@@ -24,7 +24,7 @@
                 v2f o;
                 o.pos = UnityObjectToClipPos(vertex);
                 fixed3 t = UnityObjectToViewPos (vertex);
-                o.depth = atan (t.y) / 3.14159f; 
+                o.depth = t.y; 
                 // UnityCG.cginc file contains function to transform
                 // normal from object to world space, use that
                 o.worldNormal = UnityObjectToWorldNormal(normal);
