@@ -2,12 +2,10 @@
 {
 	Properties
 	{
-		_MainTex ("Texture", 2D) = "white" {}
+		[HideInInspector]_MainTex ("Texture", 2D) = "white" {}
 
-		_DeltaX ("Delta X", Float) = 0.01
-		_DeltaY ("Delta Y", Float) = 0.01
-
-		_LineColour ("Line Colour", Color) = (1,1,1,1)
+		_DeltaX ("delta X", Float) = 0.01
+		_DeltaY ("delta Y", Float) = 0.01
 	}
 	SubShader
 	{
@@ -45,11 +43,10 @@
 			sampler2D _MainTex;
 			fixed _DeltaX;
 			fixed _DeltaY;
-			fixed4 _LineColour;
 
 			float sobel (sampler2D tex, float2 uv) {
 				float2 delta = float2(_DeltaX, _DeltaY);
-				
+			
 				float4 hr = float4(0, 0, 0, 0);
 				float4 vt = float4(0, 0, 0, 0);
 				
@@ -73,15 +70,15 @@
 				vt += tex2D(tex, (uv + float2( 0.0,  1.0) * delta)) * -2.0;
 				vt += tex2D(tex, (uv + float2( 1.0,  1.0) * delta)) * -1.0;
 
+
 				float4 grad = hr * hr + vt * vt;
-				return sqrt (grad.x) + sqrt (grad.y) + sqrt (grad.z);
+				float val = sqrt (grad.x) + sqrt (grad.y) + 3 * sqrt (grad.z);
+				return val < 0.5 ? (val < 0.3 ? 0 : (val - 0.3) * 2.5) : val;
 			}
 
 			fixed4 frag (v2f i) : SV_Target
 			{
-				fixed col = 1 - sobel(_MainTex, i.uv);
-
-				return col * _LineColour;
+				return 1 - sobel(_MainTex, i.uv);
 			}
 			ENDCG
 		}

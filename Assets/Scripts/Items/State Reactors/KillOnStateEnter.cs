@@ -10,6 +10,7 @@ public class KillOnStateEnter : MonoBehaviour {
 		Interactable i = GetComponent<Interactable> ();
 		if (i != null) {
 			i.state_change_event += OnStateChange;
+			OnStateChange (i.state);
 		}
 	}
 

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Initialiser : MonoBehaviour {
 
-	public Walker player;
+	public GameObject player;
 
 	// Use this for initialization
 	void Start () {

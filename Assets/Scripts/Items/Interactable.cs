@@ -12,7 +12,13 @@ public class Interactable : Clickable {
 
 	public event state_change state_change_event;
 
-	int state = 0;
+	public string object_id;
+
+	public int state {
+		get {
+			return Character_Manager.Instance [object_id];
+		}
+	}
 
 	public Vector3 position {
 		get {
@@ -59,12 +65,12 @@ public class Interactable : Clickable {
 	}
 
 	public void change_state (int s){
-		state = s;
+		Character_Manager.Instance[object_id] = s;
 		if (state_change_event != null)
 			state_change_event (state);
 	}
 
-	public void Use (int item_id) {
+	public virtual void Use (int item_id) {
 		Conversation c = Dialogue_Manager.Instance [dialogue_data.name, state, item_id];
 		Game_Manager.Instance.Start_Conversation (c, change_state);
 	}

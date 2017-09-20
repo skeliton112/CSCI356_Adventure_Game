@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class GUI_Manager {
 	
@@ -12,19 +13,25 @@ public class GUI_Manager {
 	private GUI_Manager () {
 		inventory = GameObject.FindGameObjectWithTag ("inventory");
 		dialogue = GameObject.FindGameObjectWithTag ("dialogue_box");
+
+		SceneManager.sceneLoaded += OnLevelLoad;
+	}
+
+	void OnLevelLoad (Scene scene, LoadSceneMode mode) {
+		inventory = GameObject.FindGameObjectWithTag ("inventory");
+		dialogue = GameObject.FindGameObjectWithTag ("dialogue_box");
 	}
 
 	public void Update()
 	{
-		//if(Input.GetKeyDown("i"))
-		//	ChangeGuiInventoryVisibility();
-
-		if (Game_Manager.Instance.State == Game_state.walking) {
-			inventory.transform.localScale = new Vector3(1, 1, 1);
-			dialogue.transform.localScale = new Vector3(0, 0, 0);
-		} else {
-			inventory.transform.localScale = new Vector3(0, 0, 0);
-			dialogue.transform.localScale = new Vector3(1, 1, 1);
+		if (inventory != null && dialogue != null) {
+			if (Game_Manager.Instance.State == Game_state.walking) {
+				inventory.transform.localScale = new Vector3 (1, 1, 1);
+				dialogue.transform.localScale = new Vector3 (0, 0, 0);
+			} else {
+				inventory.transform.localScale = new Vector3 (0, 0, 0);
+				dialogue.transform.localScale = new Vector3 (1, 1, 1);
+			}
 		}
 	}
 
@@ -49,36 +56,36 @@ public class GUI_Manager {
 	public bool inventory_item_hover(int num)
 	{
 		if (Player_Manager.Instance.items [num] == Item_state.inventory) {
-			switch (num){
-			case 0:
+			switch ((Item)num){
+			case Item.pin:
 				UpdateText("Hair Pin");
 				return true;
 
-			case 1:
+			case Item.toy:
 				UpdateText("Toy");
 				return true;
 
-			case 2:
+			case Item.food:
 				UpdateText("Food");
 				return true;
 
-			case 3:
+			case Item.coat:
 				UpdateText("Coat");
 				return true;
 
-			case 4:
+			case Item.knife:
 				UpdateText("Sickle");
 				return true;
 
-			case 5:
+			case Item.bamboo:
 				UpdateText("Bamboo");
 				return true;
 
-			case 6:
+			case Item.book:
 				UpdateText("Book");
 				return true;
 
-			case 7:
+			case Item.sake:
 				UpdateText("Sake");
 				return true;
 			}

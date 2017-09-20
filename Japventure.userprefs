@@ -1,16 +1,20 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Shaders\Sobel.shader">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Items\Interactable.cs">
     <Files>
-      <File FileName="Assets\Scripts\Items\Clickable.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Items\Interactable.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\GUI Scripts\Inventory_Item.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Managers\Game_Manager.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Managers\Player_Manager.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Managers\WalkSystem.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Graphic Effects\Sobel.cs" Line="12" Column="2" />
-      <File FileName="Assets\Shaders\Render_normals.shader" Line="27" Column="30" />
-      <File FileName="Assets\Shaders\Sobel.shader" Line="77" Column="44" />
+      <File FileName="Assets\Scripts\Managers\Game_Manager.cs" Line="135" Column="1" />
+      <File FileName="Assets\Scripts\Managers\Player_Manager.cs" Line="73" Column="23" />
+      <File FileName="Assets\Scripts\Items\Walker.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Managers\GUI_Manager.cs" Line="22" Column="64" />
+      <File FileName="Assets\Scripts\Initialiser.cs" Line="7" Column="19" />
+      <File FileName="Assets\XML\Door.xml" Line="56" Column="20" />
+      <File FileName="Assets\Shaders\Sobel.shader" Line="8" Column="5" />
+      <File FileName="Assets\Scripts\Items\Door.cs" Line="17" Column="73" />
+      <File FileName="Assets\Scripts\Items\Interactable.cs" Line="12" Column="2" />
+      <File FileName="Assets\XML\Pin.xml" Line="32" Column="50" />
+      <File FileName="Assets\Scripts\Managers\Dialogue_Manager.cs" Line="24" Column="35" />
+      <File FileName="Assets\Scripts\Managers\Character_Manager.cs" Line="30" Column="37" />
+      <File FileName="Assets\Scripts\Items\State Reactors\KillOnStateEnter.cs" Line="13" Column="28" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

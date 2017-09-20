@@ -21,6 +21,7 @@ public class Inventory_Change {
 public class Conversation {
 	public Line[] lines;
 	public int state_change;
+	[XmlElement("inventory_change", IsNullable = true)]
 	public Inventory_Change inventory_change;
 }
 

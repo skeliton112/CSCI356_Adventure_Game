@@ -424,23 +424,16 @@ public class WalkSystem {
 	private WalkSystem () {
 		region = new Region (
 			new Polygon(new List<Vector2>(){
-				new Vector2(-2, -2),
-				new Vector2(-2,  2),
-				new Vector2( 4,  2),
-				new Vector2( 4,  0),
-				new Vector2( 3,  0),
-				new Vector2( 3,  1),
-				new Vector2( 2,  1),
-				new Vector2( 2, -2),
+				new Vector2(-1.2f, -4.5f),
+				new Vector2(-1.2f, -3.5f),
+				new Vector2(-2.5f, -3.5f),
+				new Vector2(-2.5f, -1),
+				new Vector2(-4.5f, -1),
+				new Vector2(-4.5f,  4.5f),
+				new Vector2( 4.5f,  4.5f),
+				new Vector2( 4.5f, -4.5f),
 			}),
-			new List<Polygon>() {
-				new Polygon(new List<Vector2>(){
-					new Vector2(-1, -1),
-					new Vector2(-1,  1),
-					new Vector2( 1,  1),
-					new Vector2( 1, -1),
-				})
-			},
+			new List<Polygon>(),
 			Vector3.up,
 			Vector3.right,
 			0
