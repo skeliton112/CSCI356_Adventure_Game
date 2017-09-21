@@ -2,6 +2,8 @@
 {
     Properties
     {
+		[HideInInspector]_MainTex ("Texture", 2D) = "white" {}
+
         _LitColour ("Lit Colour", Color) = (0.9, 0.9, 0.9, 1)
         _UnlitColour ("Unlit Colour", Color) = (0.6, 0.6, 0.6, 1)
         _Cutoff ("Cutoff", Range (0, 5)) = 1
@@ -28,6 +30,7 @@
                 fixed3 ambient : COLOR1;
                 float4 pos : SV_POSITION;
             };
+
             v2f vert (appdata_base v)
             {
                 v2f o;

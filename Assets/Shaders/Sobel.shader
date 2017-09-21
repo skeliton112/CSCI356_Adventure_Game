@@ -78,6 +78,7 @@
 
 			fixed4 frag (v2f i) : SV_Target
 			{
+				//return tex2D(_MainTex, i.uv);
 				return 1 - sobel(_MainTex, i.uv);
 			}
 			ENDCG

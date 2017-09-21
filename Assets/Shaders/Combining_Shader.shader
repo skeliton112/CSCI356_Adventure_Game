@@ -51,6 +51,7 @@
 
 			fixed4 frag (v2f i) : SV_Target
 			{
+				//return tex2D(_OutlineTex, i.uv);
 				fixed t = 1 - (1 - tex2D(_OutlineTex, i.uv).x) * _LineColour.a;
 				fixed4 col = fixed4(0,0,0,1);
 
