@@ -27,7 +27,6 @@
             {
                 SHADOW_COORDS(1)
                 fixed3 diff : COLOR0;
-                fixed3 ambient : COLOR1;
                 float4 pos : SV_POSITION;
             };
 
@@ -39,7 +38,6 @@
                 half3 worldNormal = UnityObjectToWorldNormal(v.normal);
                 half nl = max(0, dot(worldNormal, _WorldSpaceLightPos0.xyz));
                 o.diff = nl * _LightColor0.rgb;
-                o.ambient = ShadeSH9(half4(worldNormal,1));
 
                 TRANSFER_SHADOW(o)
                 return o;
@@ -52,7 +50,7 @@
             fixed4 frag (v2f i) : SV_Target
             {
                 fixed shadow = SHADOW_ATTENUATION(i);
-                fixed3 lighting = i.diff * shadow + i.ambient;
+                fixed3 lighting = i.diff * shadow;
                 fixed4 col;
 
                 if (dot (lighting, lighting) > _Cutoff * _Cutoff)
@@ -61,6 +59,53 @@
                 	col = _UnlitColour;
 
                 return col;
+            }
+            ENDCG
+        }
+
+        Pass
+        {
+            Tags {"LightMode"="ForwardAdd"}
+            CGPROGRAM
+            #pragma vertex vert
+            #pragma fragment frag
+            #include "UnityCG.cginc"
+            #include "Lighting.cginc"
+
+            #pragma multi_compile_fwdadd_fullshadows nolightmap nodirlightmap nodynlightmap novertexlight
+
+            #include "AutoLight.cginc"
+
+            struct v2f
+            {
+                SHADOW_COORDS(1)
+                float4 pos : SV_POSITION;
+                fixed3 worldPos : TEXCOORD0;
+            };
+
+            v2f vert (appdata_base v)
+            {
+                v2f o;
+                o.pos = UnityObjectToClipPos(v.vertex);
+                o.worldPos = mul (unity_ObjectToWorld, v.vertex);
+
+                TRANSFER_SHADOW(o)
+                return o;
+            }
+
+            fixed4 _LitColour;
+			fixed  _Cutoff;
+
+            fixed4 frag (v2f i) : SV_Target
+            {
+                fixed shadow = SHADOW_ATTENUATION(i);
+                fixed3 lightPos = _WorldSpaceLightPos0.xyz - i.worldPos;
+                fixed3 lighting = _LightColor0.rgb * shadow / (1 + dot(lightPos, lightPos));
+
+                if (dot (lighting, lighting) <= _Cutoff * _Cutoff)
+                	discard;
+
+                return _LitColour;
             }
             ENDCG
         }

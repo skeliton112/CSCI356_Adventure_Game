@@ -4,8 +4,7 @@
 	{
 		[HideInInspector]_MainTex ("Texture", 2D) = "white" {}
 
-		_DeltaX ("delta X", Float) = 0.01
-		_DeltaY ("delta Y", Float) = 0.01
+		_Delta ("Delta", Float) = 0.01
 	}
 	SubShader
 	{
@@ -41,37 +40,32 @@
 			}
 			
 			sampler2D _MainTex;
-			fixed _DeltaX;
-			fixed _DeltaY;
+			fixed _Delta;
 
-			float sobel (sampler2D tex, float2 uv) {
-				float2 delta = float2(_DeltaX, _DeltaY);
+			float sobel (sampler2D t, float2 uv) {
+				float2 d = float2(_Delta, _Delta);
 			
-				float4 hr = float4(0, 0, 0, 0);
-				float4 vt = float4(0, 0, 0, 0);
+				float4 h = float4(0, 0, 0, 0);
+				float4 v = float4(0, 0, 0, 0);
 				
-				hr += tex2D(tex, (uv + float2(-1.0, -1.0) * delta)) *  1.0;
-				hr += tex2D(tex, (uv + float2( 0.0, -1.0) * delta)) *  0.0;
-				hr += tex2D(tex, (uv + float2( 1.0, -1.0) * delta)) * -1.0;
-				hr += tex2D(tex, (uv + float2(-1.0,  0.0) * delta)) *  2.0;
-				hr += tex2D(tex, (uv + float2( 0.0,  0.0) * delta)) *  0.0;
-				hr += tex2D(tex, (uv + float2( 1.0,  0.0) * delta)) * -2.0;
-				hr += tex2D(tex, (uv + float2(-1.0,  1.0) * delta)) *  1.0;
-				hr += tex2D(tex, (uv + float2( 0.0,  1.0) * delta)) *  0.0;
-				hr += tex2D(tex, (uv + float2( 1.0,  1.0) * delta)) * -1.0;
+				h += tex2D(t, (uv + float2(-1.0, -1.0) * d)) *  1.0;
+				h += tex2D(t, (uv + float2(-1.0,  0.0) * d)) *  2.0;
+				h += tex2D(t, (uv + float2(-1.0,  1.0) * d)) *  1.0;
+
+				h += tex2D(t, (uv + float2( 1.0, -1.0) * d)) * -1.0;
+				h += tex2D(t, (uv + float2( 1.0,  0.0) * d)) * -2.0;
+				h += tex2D(t, (uv + float2( 1.0,  1.0) * d)) * -1.0;
 				
-				vt += tex2D(tex, (uv + float2(-1.0, -1.0) * delta)) *  1.0;
-				vt += tex2D(tex, (uv + float2( 0.0, -1.0) * delta)) *  2.0;
-				vt += tex2D(tex, (uv + float2( 1.0, -1.0) * delta)) *  1.0;
-				vt += tex2D(tex, (uv + float2(-1.0,  0.0) * delta)) *  0.0;
-				vt += tex2D(tex, (uv + float2( 0.0,  0.0) * delta)) *  0.0;
-				vt += tex2D(tex, (uv + float2( 1.0,  0.0) * delta)) *  0.0;
-				vt += tex2D(tex, (uv + float2(-1.0,  1.0) * delta)) * -1.0;
-				vt += tex2D(tex, (uv + float2( 0.0,  1.0) * delta)) * -2.0;
-				vt += tex2D(tex, (uv + float2( 1.0,  1.0) * delta)) * -1.0;
+				v += tex2D(t, (uv + float2(-1.0, -1.0) * d)) *  1.0;
+				v += tex2D(t, (uv + float2( 0.0, -1.0) * d)) *  2.0;
+				v += tex2D(t, (uv + float2( 1.0, -1.0) * d)) *  1.0;
+
+				v += tex2D(t, (uv + float2(-1.0,  1.0) * d)) * -1.0;
+				v += tex2D(t, (uv + float2( 0.0,  1.0) * d)) * -2.0;
+				v += tex2D(t, (uv + float2( 1.0,  1.0) * d)) * -1.0;
 
 
-				float4 grad = hr * hr + vt * vt;
+				float4 grad = h * h + v * v;
 				float val = sqrt (grad.x) + sqrt (grad.y) + 3 * sqrt (grad.z);
 				return val < 0.5 ? (val < 0.3 ? 0 : (val - 0.3) * 2.5) : val;
 			}
