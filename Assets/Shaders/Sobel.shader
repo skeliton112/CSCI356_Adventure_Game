@@ -67,7 +67,7 @@
 
 				float4 grad = h * h + v * v;
 				float val = sqrt (grad.x) + sqrt (grad.y) + 3 * sqrt (grad.z);
-				return val < 0.7 ? 0 : 1;
+				return val < 0.5 ? 0 : (val < 0.7 ? (val - 0.5) * 5 : 1);
 			}
 
 			fixed4 frag (v2f i) : SV_Target
