@@ -3,6 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
+using System.IO;
+using UnityEditor;
+using System;
+using System.Xml;
+using System.Xml.Serialization;
 
 public delegate void Conversation_Callback (int state);
 
@@ -11,7 +16,7 @@ public class Game_Manager {
 	float squared (float s){return s * s;}
 
 	public void Update () { //Update loop
-		
+
 		if (Input.GetMouseButtonDown (0) && game_state == Game_state.talking)
 			Advance_Conversation ();
 
@@ -148,10 +153,36 @@ public class Game_Manager {
 
 	//Save/Load
 	public void Save () {
+        System.Xml.Serialization.XmlSerializer writer =   
+            new System.Xml.Serialization.XmlSerializer(typeof(Item_state[]));  
 
+        string path =  "Assets/XML/items_save.xml";  
+        System.IO.FileStream file = System.IO.File.Create(path);  
+
+        writer.Serialize(file, Player_Manager.Instance.items);  
+        file.Close();  
 	}
 	public void Load () {
 
+		string path = "Assets/XML/items_save.xml";
+
+		XmlSerializer serializer = new XmlSerializer(typeof(Item_state[]));
+
+		StreamReader reader = new StreamReader(path);
+		Player_Manager.Instance.items = (Item_state[])serializer.Deserialize(reader);
+
+		reader.Close();
+	}
+	
+	public void PrintStates()
+	{
+		string text = "";
+		for(int i = 0; i < 12; i++)
+		{
+			text += (Player_Manager.Instance.items[i]+", ");
+		}
+
+		Debug.Log(text);
 	}
 
 	//Singleton pattern
