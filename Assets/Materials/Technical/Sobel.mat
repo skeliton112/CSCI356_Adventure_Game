@@ -61,7 +61,7 @@ Material:
     m_Floats:
     - _BumpScale: 1
     - _Cutoff: 0.5
-    - _Delta: 0.0006
+    - _Delta: 0.0003
     - _DeltaX: 0.0005
     - _DeltaY: 0.0005
     - _DetailNormalMapScale: 1

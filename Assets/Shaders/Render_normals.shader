@@ -44,7 +44,7 @@
             	if (tex2D(_MainTex, i.uv).a < 0.5)
             		discard;
             	fixed3 n = i.worldNormal*0.5 + 0.5;
-                fixed4 c = fixed4 (n.x, n.y, i.worldNormal.w, 1);
+                fixed4 c = fixed4 (n.x, n.y, n.z, 1);
                 return c;
             }
             ENDCG

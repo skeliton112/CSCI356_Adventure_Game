@@ -4,8 +4,10 @@ using UnityEngine;
 
 public class Message_Pumper : MonoBehaviour {
 
-	void Start () {
+	public GameObject player;
 
+	void Start () {
+		Player_Manager.Instance.set_player (player);
 	}
 
 	void Update () {

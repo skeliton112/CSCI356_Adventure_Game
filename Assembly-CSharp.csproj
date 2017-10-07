@@ -56,7 +56,6 @@
      <Compile Include="Assets\Scripts\Graphic Effects\Sobel.cs" />
      <Compile Include="Assets\Scripts\GUI Scripts\Dialogue_Printer.cs" />
      <Compile Include="Assets\Scripts\GUI Scripts\Inventory_Item.cs" />
-     <Compile Include="Assets\Scripts\Initialiser.cs" />
      <Compile Include="Assets\Scripts\Items\Clickable.cs" />
      <Compile Include="Assets\Scripts\Items\Door.cs" />
      <Compile Include="Assets\Scripts\Items\Interactable.cs" />
