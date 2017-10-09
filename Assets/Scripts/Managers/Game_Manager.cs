@@ -8,6 +8,7 @@ using UnityEditor;
 using System;
 using System.Xml;
 using System.Xml.Serialization;
+using System.Linq;
 
 public delegate void Conversation_Callback (int state);
 
@@ -153,6 +154,7 @@ public class Game_Manager {
 
 	//Save/Load
 	public void Save () {
+		Debug.Log("Save");
         System.Xml.Serialization.XmlSerializer writer =   
             new System.Xml.Serialization.XmlSerializer(typeof(Item_state[]));  
 
@@ -160,16 +162,33 @@ public class Game_Manager {
         System.IO.FileStream file = System.IO.File.Create(path);  
 
         writer.Serialize(file, Player_Manager.Instance.items);  
-        file.Close();  
-	}
-	public void Load () {
+        file.Close();
 
+		writer = new System.Xml.Serialization.XmlSerializer(typeof(CharacterPair[]));
+		path = "Assets/XML/character_states_saves.xml";
+		file = System.IO.File.Create(path);
+		
+		writer.Serialize(file, Character_Manager.Instance.states.Select(kv=>new CharacterPair(){id = kv.Key, value=kv.Value}).ToArray());
+
+		file.Close();
+	}
+	
+	public void Load () {
+		Debug.Log("Load");
 		string path = "Assets/XML/items_save.xml";
 
 		XmlSerializer serializer = new XmlSerializer(typeof(Item_state[]));
 
 		StreamReader reader = new StreamReader(path);
 		Player_Manager.Instance.items = (Item_state[])serializer.Deserialize(reader);
+
+		reader.Close();
+
+		serializer = new System.Xml.Serialization.XmlSerializer(typeof(CharacterPair[]));
+		path = "Assets/XML/character_states_saves.xml";
+		reader = new StreamReader(path);
+		
+		Character_Manager.Instance.states = ((CharacterPair[])serializer.Deserialize(reader)).ToDictionary(i => i.id, i => i.value);
 
 		reader.Close();
 	}
@@ -181,7 +200,6 @@ public class Game_Manager {
 		{
 			text += (Player_Manager.Instance.items[i]+", ");
 		}
-
 		Debug.Log(text);
 	}
 

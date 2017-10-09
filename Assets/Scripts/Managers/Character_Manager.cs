@@ -2,9 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+	[System.Serializable()]
+	public struct CharacterPair
+	{
+		public string id;
+		public int value;	
+	};
+	
 public class Character_Manager {
-
-	Dictionary<string, int> states = new Dictionary<string, int> ();
+	public Dictionary<string, int> states = new Dictionary<string, int> ();
 
 	public int this[string s]{
 		get {
