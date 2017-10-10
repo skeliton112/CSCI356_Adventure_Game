@@ -11,7 +11,7 @@ public class Walker : MonoBehaviour {
 			return transform.position;
 		}
 	}
-	Interaction_Callback callback = null;
+	private Interaction_Callback callback = null;
 
 	public virtual void set_path (List<Vector3> path, Interaction_Callback c = null) {
 		waypoints = path;
@@ -33,8 +33,10 @@ public class Walker : MonoBehaviour {
 			}
 			transform.Translate (direction);
 		} else if (callback != null) {
+			Interaction_Callback temp = new Interaction_Callback (callback);
 			callback ();
-			callback = null;
+			if (temp == callback)
+				callback = null;
 		}
 	}
 }
