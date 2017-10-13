@@ -237,11 +237,11 @@ public class Game_Manager {
 
 		Player_Manager.Instance.set_init_position(position.returnVector3());
 
+		//Loads the scene where the player saved, this also resets object location, etc.
 		ChangeScene (position.scene_name, position.returnVector3());
-
-
 	}
 
+	//A function that sets everything back to its initial state
 	public void reset()
 	{
 		Debug.Log("Reset");
