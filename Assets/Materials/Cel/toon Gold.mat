@@ -74,5 +74,5 @@ Material:
     m_Colors:
     - _Color: {r: 0.7352941, g: 0.51724136, b: 0, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-    - _LitColour: {r: 0.75735295, g: 0.5164748, b: 0.04455017, a: 1}
+    - _LitColour: {r: 0.9117647, g: 0.6965383, b: 0.27487022, a: 1}
     - _UnlitColour: {r: 0.78676474, g: 0.5697262, b: 0, a: 1}

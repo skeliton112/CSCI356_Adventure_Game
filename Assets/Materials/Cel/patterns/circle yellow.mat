@@ -7,7 +7,7 @@ Material:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: circle yellow
-  m_Shader: {fileID: 4800000, guid: 6ab9d29ea27eaa34b9bcee11c26186db, type: 3}
+  m_Shader: {fileID: 4800000, guid: f7dd8159b6e414699a3f3c4a2ec05eb3, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
