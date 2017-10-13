@@ -26,10 +26,5 @@ public class Test_Save_Call : MonoBehaviour {
 		{
 			Game_Manager.Instance.PrintStates();
 		}
-
-		if(Input.GetKeyDown("r"))
-		{
-			Game_Manager.Instance.reset();
-		}
 	}
 }

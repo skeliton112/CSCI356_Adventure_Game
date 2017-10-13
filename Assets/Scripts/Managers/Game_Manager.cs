@@ -12,42 +12,6 @@ using System.Linq;
 
 public delegate void Conversation_Callback (int state);
 
-[System.Serializable()]
-public class player_location{
-	public float x;
-	public float y;
-	public float z;
-
-	public string scene_name;
-	
-	public player_location()
-	{
-		x = 0;
-		y = 0;
-		z = 0;
-		scene_name = "";
-	}
-	public player_location(Vector3 other){
-		x = other.x;
-		y = other.y;
-		z = other.z;
-		scene_name = "";
-	}
-
-	public player_location(Vector3 other, string name)
-	{
-		x = other.x;
-		y = other.y;
-		z = other.z;
-		scene_name = name;
-	}
-
-	public Vector3 returnVector3()
-	{
-		return new Vector3(x,y,z);
-	}
-}
-
 public class Game_Manager {
 
 	float squared (float s){return s * s;}
@@ -191,65 +155,42 @@ public class Game_Manager {
 	//Save/Load
 	public void Save () {
 		Debug.Log("Save");
-
-		//Saves the item states
-        System.Xml.Serialization.XmlSerializer serializer =   
+        System.Xml.Serialization.XmlSerializer writer =   
             new System.Xml.Serialization.XmlSerializer(typeof(Item_state[]));  
-		System.IO.FileStream file = get_file("Assets/XML/Saves/items_save.xml");
-        serializer.Serialize(file, Player_Manager.Instance.items);  
+
+        string path =  "Assets/XML/items_save.xml";  
+        System.IO.FileStream file = System.IO.File.Create(path);  
+
+        writer.Serialize(file, Player_Manager.Instance.items);  
         file.Close();
 
-		//Saves the character states
-		serializer = new System.Xml.Serialization.XmlSerializer(typeof(CharacterPair[]));
-		file = get_file("Assets/XML/Saves/character_states_save.xml");
-		serializer.Serialize(file, Character_Manager.Instance.states.Select(kv=>new CharacterPair(){id = kv.Key, value=kv.Value}).ToArray());
-		file.Close();
+		writer = new System.Xml.Serialization.XmlSerializer(typeof(CharacterPair[]));
+		path = "Assets/XML/character_states_saves.xml";
+		file = System.IO.File.Create(path);
 		
-		//Saves the player position
-		player_location position_save = new player_location(Player_Manager.Instance.position,SceneManager.GetActiveScene().name);
-		serializer = new System.Xml.Serialization.XmlSerializer(typeof(player_location));
-		file = get_file("Assets/XML/Saves/player_position_save.xml");
-		serializer.Serialize(file, position_save);
+		writer.Serialize(file, Character_Manager.Instance.states.Select(kv=>new CharacterPair(){id = kv.Key, value=kv.Value}).ToArray());
 
 		file.Close();
-	}
-
-	System.IO.FileStream get_file(string path){
-		return System.IO.File.Create(path);
 	}
 	
 	public void Load () {
 		Debug.Log("Load");
+		string path = "Assets/XML/items_save.xml";
 
 		XmlSerializer serializer = new XmlSerializer(typeof(Item_state[]));
-		StreamReader reader = new StreamReader("Assets/XML/Saves/items_save.xml");
+
+		StreamReader reader = new StreamReader(path);
 		Player_Manager.Instance.items = (Item_state[])serializer.Deserialize(reader);
+
 		reader.Close();
 
 		serializer = new System.Xml.Serialization.XmlSerializer(typeof(CharacterPair[]));
-		reader = new StreamReader("Assets/XML/Saves/character_states_save.xml");
+		path = "Assets/XML/character_states_saves.xml";
+		reader = new StreamReader(path);
+		
 		Character_Manager.Instance.states = ((CharacterPair[])serializer.Deserialize(reader)).ToDictionary(i => i.id, i => i.value);
+
 		reader.Close();
-
-		serializer = new System.Xml.Serialization.XmlSerializer(typeof(player_location));
-		reader = new StreamReader("Assets/XML/Saves/player_position_save.xml");
-		player_location position = ((player_location)serializer.Deserialize(reader));
-
-		Player_Manager.Instance.set_init_position(position.returnVector3());
-
-		//Loads the scene where the player saved, this also resets object location, etc.
-		ChangeScene (position.scene_name, position.returnVector3());
-	}
-
-	//A function that sets everything back to its initial state
-	public void reset()
-	{
-		Debug.Log("Reset");
-		Player_Manager.Instance.items = new Item_state[12];
-		Character_Manager.Instance.states = new Dictionary<string, int>();
-		Player_Manager.Instance.set_init_position(new Vector3(0,0,0));
-		ChangeScene ("1", new Vector3(0,0,0));
-
 	}
 	
 	public void PrintStates()
