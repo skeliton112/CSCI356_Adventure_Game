@@ -7,7 +7,7 @@ Material:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: toon White
-  m_Shader: {fileID: 4800000, guid: e84edefde59414698aed41b6c7a2047f, type: 3}
+  m_Shader: {fileID: 4800000, guid: 76cb13de651f54242949a44f732b9dbe, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
