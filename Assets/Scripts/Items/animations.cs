@@ -5,29 +5,20 @@ using UnityEngine;
 public class animations : MonoBehaviour {
 
 	public GameObject leftArm, rightArm, body; 
-	float timer; 
-	float duration; 
-	Interaction_Callback callback; 
-
-	// Use this for initialization
-	void Start () {
-		
-	}
+	float timer;
+	float duration;
+	Interaction_Callback callback;
 	
 	// Update is called once per frame
 	void Update () {
 		timer += Game_Manager.deltaTime; 
 
-	//	if (timer > duration) {
-	//		callback (); 
+		if (timer > duration && callback != null)
+			callback (); 
 
 		fallDrunk (); 
 	}
 
-
-
-
-		
 	public void PlayAnimation (string animationType, Interaction_Callback c, float d) {
 
 		timer = 0; 
@@ -51,6 +42,7 @@ public class animations : MonoBehaviour {
 		case "happy":
 			happy (); 
 			break;
+
 		case "fallDrunk":
 			fallDrunk (); 
 			break; 

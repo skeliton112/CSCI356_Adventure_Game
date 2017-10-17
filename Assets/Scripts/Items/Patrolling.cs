@@ -2,31 +2,34 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-enum action_type { walk_to, perform_animation }
+public enum action_type { walk_to, play_animation, look_at }
 
 [System.Serializable()]
 public struct action
 {
-	action_type type;
-	Vector3 walk_target;
-	string animation_name;
+	public action_type type;
+	public Vector3 target;
+	public string animation_name;
+	public float animation_duration;
 };
 
 public class Patrolling : MonoBehaviour {
 	public float min_distance;
-	public Transform[] waypoints;
-
+	public action[] waypoints;
 	private int currentPoint = 0;
 	private Vector3 target;
 	private Vector3 direction;
-	private Walker character;
+	GameObject player;
+	Walker character;
+	animations animator;
 
 	void Start () {
+		player = GameObject.FindGameObjectWithTag("Player");
 		character = gameObject.GetComponent <Walker> ();
-		target = waypoints [currentPoint].position;
-		patrol_path ();
+		animator = gameObject.GetComponent <animations> ();
+		next_action ();
 	}
-
+	
 
 	void Update () {
 		direction = Vector3.Normalize(target - transform.position);
@@ -49,17 +52,26 @@ public class Patrolling : MonoBehaviour {
 		}
 	}
 
-	void change_waypoint () {
+	void next_action () {
 		currentPoint++;
-
 		if (currentPoint >= waypoints.Length)
 			currentPoint = 0;
-		target = waypoints [currentPoint].position;
-		patrol_path();
+
+		switch (waypoints[currentPoint].type){
+		case action_type.walk_to:
+			target = waypoints [currentPoint].target;
+			patrol_path ();
+			break;
+		case action_type.play_animation:
+			animator.PlayAnimation (waypoints [currentPoint].animation_name, next_action, waypoints [currentPoint].animation_duration);
+			break;
+		case action_type.look_at:
+			break;
+		}
 	}
 
 	void patrol_path()
 	{
-		character.set_path(WalkSystem.Instance.get_path (gameObject.transform.position, target), change_waypoint);
+		character.set_path(WalkSystem.Instance.get_path (gameObject.transform.position, target), next_action);
 	}
 }

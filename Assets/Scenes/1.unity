@@ -1053,10 +1053,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   min_distance: 1.2
   waypoints:
-  - {fileID: 231440890}
-  - {fileID: 1086093680}
-  - {fileID: 231440890}
-  - {fileID: 1086093680}
+  - type: 0
+    target: {x: 0, y: 0, z: 0}
+    animation_name: 
+    animation_duration: 0
+  - type: 0
+    target: {x: 0, y: 0, z: 0}
+    animation_name: 
+    animation_duration: 0
+  - type: 0
+    target: {x: 0, y: 0, z: 0}
+    animation_name: 
+    animation_duration: 0
+  - type: 0
+    target: {x: 0, y: 0, z: 0}
+    animation_name: 
+    animation_duration: 0
 --- !u!65 &1132537171
 BoxCollider:
   m_ObjectHideFlags: 0

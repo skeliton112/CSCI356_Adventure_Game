@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Walker : MonoBehaviour {
-
+	
 	protected List<Vector3> waypoints = new List<Vector3>();
 	public float speed;
 	public bool is_paused;
