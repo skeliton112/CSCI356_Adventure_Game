@@ -64,6 +64,7 @@
      <Compile Include="Assets\Scripts\Items\onHoverLoad.cs" />
      <Compile Include="Assets\Scripts\Items\onHoverPlay.cs" />
      <Compile Include="Assets\Scripts\Items\Patrolling.cs" />
+     <Compile Include="Assets\Scripts\Items\QuitOnClick.cs" />
      <Compile Include="Assets\Scripts\Items\State Reactors\KillOnStateEnter.cs" />
      <Compile Include="Assets\Scripts\Items\volumeSlider.cs" />
      <Compile Include="Assets\Scripts\Items\Walkable.cs" />
