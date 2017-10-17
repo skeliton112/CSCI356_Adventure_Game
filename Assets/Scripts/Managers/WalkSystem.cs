@@ -2,13 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[System.Serializable()]
 public class Graph {
-	public float[][] edges;
-
-	public Graph () {
-		edges = new float[0][];
-	}
+	float[][] edges;
 
 	public int Size {
 		get {
@@ -47,17 +42,13 @@ public class Graph {
 public class Polygon {
 	public List<Vector2> verts = new List<Vector2>();
 
-	public Polygon () {
-		verts = new List<Vector2> ();
-	}
-
-	public Polygon (Polygon p) : this(p.verts) {}
-
 	public Vector2 this[int i]{
 		get {
 			return verts [i];
 		}
 	}
+
+	public Polygon () : this (new List <Vector2>()) {}
 
 	public Polygon (List<Vector2> v){
 		verts = v;
@@ -110,7 +101,7 @@ public class Polygon {
 	public bool contains (Vector2 a, bool on_line){
 		bool parity = false;
 		for (int i = 0; i < verts.Count; i++) {
-			
+
 			int j = (i + 1) % verts.Count; 
 
 			float frac = Vector2.Dot(a - verts [i], verts [j] - verts [i]) / Vector2.SqrMagnitude (verts [j] - verts [i]);
@@ -158,15 +149,7 @@ public class Region {
 	public Vector3 normal, right;
 	public float constant;
 
-	public Region () {
-		boundary = new Polygon ();
-		holes = new List<Polygon> ();
-		normal = Vector3.up;
-		right = Vector3.right;
-		constant = 0;
-		count = 0;
-		graph = new Graph ();
-	}
+	public Region () : this (new Polygon (), new List<Polygon> (), Vector3.up, Vector3.right, 0) {}
 
 	public Region (Polygon p, List<Polygon> h, Vector3 norm, Vector3 rght, float offset) {
 		boundary = p;
@@ -228,11 +211,11 @@ public class Region {
 			i -= boundary.Count; j -= boundary.Count;
 			if (i < 0)
 				return false;
-			
+
 			for (int k = 0; k < holes.Count; k++){
 				if (i < holes [k].Count && j < holes[k].Count)
 					return i+1 == j || i == 0 && j == holes[k].Count - 1;
-				
+
 				i -= holes [k].Count;
 				j -= holes [k].Count;
 				if (i < 0)
@@ -447,18 +430,33 @@ public class WalkSystem {
 	}
 
 	private WalkSystem () {
-		Change_Shape ("test_region");
+		Load_Region ("test_region");
 	}
 
-	public void Change_Shape (string name) {
-		System.Xml.Serialization.XmlSerializer serializer = new System.Xml.Serialization.XmlSerializer(typeof(Region));
-		string path = "Assets/XML/" + name + ".xml";
-		System.IO.FileStream fs = new System.IO.FileStream(path, System.IO.FileMode.Open, System.IO.FileAccess.Read);
-		System.Xml.XmlReader reader = System.Xml.XmlReader.Create(fs);
+	public void Load_Region (string name){
+		switch (name) {
+		case "test_region":
+			
+			region = new Region (
+				new Polygon(new List<Vector2>(){
+					new Vector2(-1.2f, -4.5f),
+					new Vector2(-1.2f, -3.5f),
+					new Vector2(-2.5f, -3.5f),
+					new Vector2(-2.5f, -1),
+					new Vector2(-4.5f, -1),
+					new Vector2(-4.5f,  4.5f),
+					new Vector2( 4.5f,  4.5f),
+					new Vector2( 4.5f, -4.5f),
+				}),
+				new List<Polygon>(),
+				Vector3.up,
+				Vector3.right,
+				0
+			);
+			region.build_graph ();
 
-		region = (Region)serializer.Deserialize(reader);
-
-		region.build_graph ();
+			break;
+		}
 	}
 
 	//Singleton pattern
