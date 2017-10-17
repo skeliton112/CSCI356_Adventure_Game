@@ -2,7 +2,7 @@
 public enum Item { bamboo, book, coat, food, knife, pin, sake, toy, fox_mask, boar_mask, ox_mask, tiger_mask }
 
 [System.Serializable()]
-public enum Character { pc, prentice, kitchen_hand, smith, chef, laundress, groundskeeper, librarian, guard, lazy_guard }
+public enum Character { pc, prentice, kitchen_hand, smith, chef, laundress, groundskeeper, librarian, guard, lazy_guard, none }
 
 [System.Serializable()]
 public enum Action_Type { give, take }
