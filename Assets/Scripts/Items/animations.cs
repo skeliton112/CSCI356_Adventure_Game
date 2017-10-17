@@ -4,28 +4,25 @@ using UnityEngine;
 
 public class animations : MonoBehaviour {
 
-	public GameObject leftArm, rightArm, body; 
+	public GameObject leftArm, rightArm, body;
+	public Character character;
 	float timer;
 	float duration;
 	Interaction_Callback callback;
+	string animation_name;
+
+	void Start () {
+		Game_Manager.Animation_Play += PlayAnimation;
+	}
 
 	// Update is called once per frame
 	void Update () {
 		timer += Game_Manager.deltaTime; 
 
-		if (timer > duration && callback != null)
+		if (timer > duration && duration >= 0 && callback != null)
 			callback (); 
 
-		fallDrunk (); 
-	}
-
-	public void PlayAnimation (string animationType, Interaction_Callback c, float d) {
-
-		timer = 0; 
-		callback = c; 
-		duration = d; 
-
-		switch (animationType) {
+		switch (animation_name) {
 
 		case "wave":
 			wave (); 
@@ -48,6 +45,25 @@ public class animations : MonoBehaviour {
 			break; 
 
 		}
+	}
+
+	public void PlayAnimation (Character c, string n){
+		if (character == c) {
+			duration = 0;
+			animation_name = n;
+			callback = null;
+			timer = 0;
+		} else {
+			animation_name = "";
+		}
+	}
+
+	public void PlayAnimation (string animationType, Interaction_Callback c, float d) {
+
+		timer = 0;
+		callback = c; 
+		duration = d; 
+		animation_name = animationType;
 
 	}
 

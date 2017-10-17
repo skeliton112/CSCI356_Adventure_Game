@@ -7,6 +7,7 @@
 					<Line>
 						<speaker>pc</speaker>
 						<text>It's locked</text>
+						<speaker_action></speaker_action>
 					</Line>
 				</lines>
 				<state_change>0</state_change>
@@ -18,6 +19,7 @@
 					<Line>
 						<speaker>pc</speaker>
 						<text>I don't know how to do that</text>
+						<speaker_action></speaker_action>
 					</Line>
 				</lines>
 				<state_change>0</state_change>
@@ -35,6 +37,7 @@
 						<Line>
 							<speaker>pc</speaker>
 							<text>Yes! I picked the lock</text>
+							<speaker_action></speaker_action>
 						</Line>
 					</lines>
 					<state_change>1</state_change>
@@ -51,6 +54,7 @@
 					<Line>
 						<speaker>pc</speaker>
 						<text>It's locked</text>
+						<speaker_action></speaker_action>
 					</Line>
 				</lines>
 				<state_change>1</state_change>
@@ -62,6 +66,7 @@
 					<Line>
 						<speaker>pc</speaker>
 						<text>I don't know how to do that</text>
+						<speaker_action></speaker_action>
 					</Line>
 				</lines>
 				<state_change>1</state_change>

@@ -9,6 +9,7 @@ using UnityEngine;
 public struct Line {
 	public Character speaker;
 	public string text;
+	public string speaker_animation;
 }
 
 [System.Serializable()]

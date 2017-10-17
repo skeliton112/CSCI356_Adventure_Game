@@ -7,10 +7,12 @@
 					<Line>
 						<speaker>pc</speaker>
 						<text>No item</text>
+						<speaker_action></speaker_action>
 					</Line>
 					<Line>
 						<speaker>chef</speaker>
 						<text>In state 0</text>
+						<speaker_action></speaker_action>
 					</Line>
 				</lines>
 				<state_change>1</state_change>
@@ -25,6 +27,7 @@
 					<Line>
 						<speaker>pc</speaker>
 						<text>Default</text>
+						<speaker_action></speaker_action>
 					</Line>
 				</lines>
 				<state_change>0</state_change>
@@ -49,6 +52,7 @@
 					<Line>
 						<speaker>pc</speaker>
 						<text>No item in state 1</text>
+						<speaker_action></speaker_action>
 					</Line>
 				</lines>
 				<state_change>0</state_change>
@@ -63,6 +67,7 @@
 					<Line>
 						<speaker>pc</speaker>
 						<text>Default</text>
+						<speaker_action></speaker_action>
 					</Line>
 				</lines>
 				<state_change>0</state_change>

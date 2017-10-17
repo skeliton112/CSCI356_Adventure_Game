@@ -12,9 +12,12 @@ using System.Linq;
 
 public delegate void Conversation_Callback (int state);
 
+public delegate void Animation_Caller (Character character, string name);
+
 public class Game_Manager {
 
 	float squared (float s){return s * s;}
+	public static event Animation_Caller Animation_Play;
 
 	public void Update () { //Update loop
 
@@ -149,9 +152,11 @@ public class Game_Manager {
 	}
 	private void Advance_Conversation () {
 		current_line++;
-		if (current_line < conversation.lines.Length)
+		if (current_line < conversation.lines.Length) {
 			GUI_Manager.Instance.Change_Line (conversation.lines [current_line]);
-		else
+			if (Animation_Play != null)
+				Animation_Play (conversation.lines [current_line].speaker, conversation.lines [current_line].speaker_animation);
+		} else
 			End_Conversation ();
 	}
 	private void End_Conversation () {
