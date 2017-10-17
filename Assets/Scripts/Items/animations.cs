@@ -8,7 +8,7 @@ public class animations : MonoBehaviour {
 	float timer;
 	float duration;
 	Interaction_Callback callback;
-	
+
 	// Update is called once per frame
 	void Update () {
 		timer += Game_Manager.deltaTime; 
@@ -77,7 +77,11 @@ public class animations : MonoBehaviour {
 	}
 	void fallDrunk() {
 
-		body.transform.rotation = Quaternion.Euler (new Vector3 (90 * Mathf.Sin(timer * 20), 0, 0)); 
+
+		Quaternion newRotation = Quaternion.AngleAxis (90, Vector3.right); 
+		body.transform.rotation = Quaternion.Slerp(body.transform.rotation, newRotation, timer);
+
+		//	body.transform.rotation = Quaternion.Euler (new Vector3 (90 * Mathf.Sin(timer * 20), 0, 0)); 
 
 	}
 }
