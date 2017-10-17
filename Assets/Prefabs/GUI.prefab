@@ -539,6 +539,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemImage: {fileID: 0}
+  greyImage: {fileID: 0}
   inventory_item_number: 4
 --- !u!114 &114097276369588678
 MonoBehaviour:
@@ -606,6 +607,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemImage: {fileID: 0}
+  greyImage: {fileID: 0}
   inventory_item_number: 8
 --- !u!114 &114271367614761696
 MonoBehaviour:
@@ -619,6 +621,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemImage: {fileID: 0}
+  greyImage: {fileID: 0}
   inventory_item_number: 5
 --- !u!114 &114289164061407948
 MonoBehaviour:
@@ -733,6 +736,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemImage: {fileID: 21300000, guid: 0a9e593b435b94bb9be4fdbbc333b5bb, type: 3}
+  greyImage: {fileID: 0}
   inventory_item_number: 1
 --- !u!114 &114395656416039880
 MonoBehaviour:
@@ -760,6 +764,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemImage: {fileID: 0}
+  greyImage: {fileID: 0}
   inventory_item_number: 3
 --- !u!114 &114519899501270200
 MonoBehaviour:
@@ -773,6 +778,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemImage: {fileID: 0}
+  greyImage: {fileID: 0}
   inventory_item_number: 9
 --- !u!114 &114529018088266982
 MonoBehaviour:
@@ -786,6 +792,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemImage: {fileID: 21300000, guid: 9634adc9711d245ab8246e0813d6180f, type: 3}
+  greyImage: {fileID: 0}
   inventory_item_number: 0
 --- !u!114 &114540284296948278
 MonoBehaviour:
@@ -867,6 +874,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemImage: {fileID: 0}
+  greyImage: {fileID: 0}
   inventory_item_number: 7
 --- !u!114 &114619623050584796
 MonoBehaviour:
@@ -1000,15 +1008,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.8980392, g: 0.8666667, b: 0.6862745, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: 6c14241dfc6654e529f84463b0c3b107, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -1027,6 +1035,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemImage: {fileID: 0}
+  greyImage: {fileID: 0}
   inventory_item_number: 6
 --- !u!114 &114780015061847220
 MonoBehaviour:
@@ -1040,6 +1049,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemImage: {fileID: 0}
+  greyImage: {fileID: 0}
   inventory_item_number: 2
 --- !u!114 &114787578413515318
 MonoBehaviour:
@@ -1053,6 +1063,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemImage: {fileID: 0}
+  greyImage: {fileID: 0}
   inventory_item_number: 10
 --- !u!114 &114803213947633942
 MonoBehaviour:
@@ -1066,14 +1077,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.89705884, g: 0.86503404, b: 0.68598616, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 6c14241dfc6654e529f84463b0c3b107, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1120,6 +1131,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemImage: {fileID: 0}
+  greyImage: {fileID: 0}
   inventory_item_number: 11
 --- !u!114 &114926933628596644
 MonoBehaviour:
