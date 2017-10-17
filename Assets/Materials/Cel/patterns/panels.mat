@@ -7,7 +7,7 @@ Material:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: panels
-  m_Shader: {fileID: 4800000, guid: f7dd8159b6e414699a3f3c4a2ec05eb3, type: 3}
+  m_Shader: {fileID: 4800000, guid: 6ab9d29ea27eaa34b9bcee11c26186db, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
@@ -39,7 +39,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _LitTexture:
-        m_Texture: {fileID: 2800000, guid: 7f94095a2e9aa4f59b4468d160bd3cb1, type: 3}
+        m_Texture: {fileID: 2800000, guid: 9aa34e53804757e4a931d88acbc81ce7, type: 3}
         m_Scale: {x: 8, y: 8}
         m_Offset: {x: 0, y: 0}
     - _MainTex:

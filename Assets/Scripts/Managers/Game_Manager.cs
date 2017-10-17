@@ -154,7 +154,7 @@ public class Game_Manager {
 
 	//Save/Load
 	public void Save () {
-		Debug.Log("Save");
+		
         System.Xml.Serialization.XmlSerializer writer =   
             new System.Xml.Serialization.XmlSerializer(typeof(Item_state[]));  
 

@@ -1,21 +1,21 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Shaders\Sobel.shader">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Managers\WalkSystem.cs">
     <Files>
-      <File FileName="Assets\Scripts\Managers\WalkSystem.cs" Line="1" Column="1" />
-      <File FileName="Assets\Shaders\Combining_Shader.shader" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Managers\Dialogue_Manager.cs" Line="59" Column="37" />
+      <File FileName="Assets\Scripts\Managers\WalkSystem.cs" Line="489" Column="12" />
       <File FileName="Assets\Shaders\cel.shader" Line="1" Column="1" />
       <File FileName="Assets\Shaders\Smoke.shader" Line="1" Column="1" />
-      <File FileName="Assets\Shaders\Render_normals.shader" Line="1" Column="1" />
-      <File FileName="Assets\Shaders\Sobel.shader" Line="75" Column="36" />
-      <File FileName="Assets\Scripts\Flicker.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Graphic Effects\Outliner.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Graphic Effects\Sobel.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Managers\Player_Manager.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Managers\Player_Manager.cs" Line="105" Column="1" />
       <File FileName="Assets\Scripts\Managers\Message_Pumper.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Managers\Game_Manager.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Managers\Game_Manager.cs" Line="182" Column="15" />
       <File FileName="Assets\Scripts\Managers\GUI_Manager.cs" Line="1" Column="1" />
       <File FileName="Assets\Shaders\Water.shader" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Graphic Effects\Outliner.cs" Line="1" Column="1" />
+      <File FileName="Assets\Shaders\Combining_Shader.shader" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Graphic Effects\Camera_Script.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Items\Walker.cs" Line="12" Column="8" />
+      <File FileName="Assets\Scripts\Items\Patrolling.cs" Line="24" Column="17" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

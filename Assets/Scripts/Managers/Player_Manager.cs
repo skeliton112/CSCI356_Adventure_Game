@@ -32,6 +32,11 @@ public class Player_Manager {
 			return player.position;
 		}
 	}
+	public Vector3 direction {
+		get {
+			return player.direction;
+		}
+	}
 
 	private Player_Manager () {
 		SceneManager.sceneLoaded += OnLevelLoad;
@@ -68,6 +73,11 @@ public class Player_Manager {
 		plan = null;
 		if (player != null)
 			player.set_path (WalkSystem.Instance.get_path (player.position, target), Interact);
+	}
+
+	public void clear_path () {
+		plan = null;
+		player.clear_path ();
 	}
 
 	public void set_init_position (Vector3 p){

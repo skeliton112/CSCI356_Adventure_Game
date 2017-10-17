@@ -2,8 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[System.Serializable()]
 public class Graph {
-	float[][] edges;
+	public float[][] edges;
+
+	public Graph () {
+		edges = new float[0][];
+	}
 
 	public int Size {
 		get {
@@ -38,8 +43,15 @@ public class Graph {
 	}
 }
 
+[System.Serializable()]
 public class Polygon {
 	public List<Vector2> verts = new List<Vector2>();
+
+	public Polygon () {
+		verts = new List<Vector2> ();
+	}
+
+	public Polygon (Polygon p) : this(p.verts) {}
 
 	public Vector2 this[int i]{
 		get {
@@ -135,13 +147,26 @@ public class Polygon {
 	}
 }
 
+[System.Serializable()]
 public class Region {
-	Polygon boundary;
-	List<Polygon> holes;
+	public Polygon boundary;
+	public List<Polygon> holes;
+	[System.Xml.Serialization.XmlIgnore()]
 	public int count { get; set;}
+	[System.Xml.Serialization.XmlIgnore()]
 	public Graph graph;
-	Vector3 normal, right;
-	float constant;
+	public Vector3 normal, right;
+	public float constant;
+
+	public Region () {
+		boundary = new Polygon ();
+		holes = new List<Polygon> ();
+		normal = Vector3.up;
+		right = Vector3.right;
+		constant = 0;
+		count = 0;
+		graph = new Graph ();
+	}
 
 	public Region (Polygon p, List<Polygon> h, Vector3 norm, Vector3 rght, float offset) {
 		boundary = p;
@@ -422,22 +447,17 @@ public class WalkSystem {
 	}
 
 	private WalkSystem () {
-		region = new Region (
-			new Polygon(new List<Vector2>(){
-				new Vector2(-1.2f, -4.5f),
-				new Vector2(-1.2f, -3.5f),
-				new Vector2(-2.5f, -3.5f),
-				new Vector2(-2.5f, -1),
-				new Vector2(-4.5f, -1),
-				new Vector2(-4.5f,  4.5f),
-				new Vector2( 4.5f,  4.5f),
-				new Vector2( 4.5f, -4.5f),
-			}),
-			new List<Polygon>(),
-			Vector3.up,
-			Vector3.right,
-			0
-		);
+		Change_Shape ("test_region");
+	}
+
+	public void Change_Shape (string name) {
+		System.Xml.Serialization.XmlSerializer serializer = new System.Xml.Serialization.XmlSerializer(typeof(Region));
+		string path = "Assets/XML/" + name + ".xml";
+		System.IO.FileStream fs = new System.IO.FileStream(path, System.IO.FileMode.Open, System.IO.FileAccess.Read);
+		System.Xml.XmlReader reader = System.Xml.XmlReader.Create(fs);
+
+		region = (Region)serializer.Deserialize(reader);
+
 		region.build_graph ();
 	}
 
