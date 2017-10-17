@@ -21,6 +21,14 @@ public class Game_Manager {
 		if (Input.GetMouseButtonDown (0) && game_state == Game_state.talking)
 			Advance_Conversation ();
 
+		if (Input.GetKeyDown (KeyCode.Escape)) {
+			if (menu_up)
+				is_paused = false;
+			else
+				is_paused = true;
+			menu_up = !menu_up;
+		}
+
 
 		if (load_locked) {
 			loadScene ();
@@ -92,6 +100,9 @@ public class Game_Manager {
 			return Instance.is_paused ? 0 : Time.deltaTime;
 		}
 	}
+
+	//Pause menu
+	public bool menu_up = false;
 
 	//Selection System
 	Item item; public bool has_selection;

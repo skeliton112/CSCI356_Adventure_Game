@@ -51,6 +51,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\elena\animations.cs" />
      <Compile Include="Assets\Scripts\Graphic Effects\Camera_Script.cs" />
      <Compile Include="Assets\Scripts\Graphic Effects\Outliner.cs" />
      <Compile Include="Assets\Scripts\GUI Scripts\Dialogue_Printer.cs" />
