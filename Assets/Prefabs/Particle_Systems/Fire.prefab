@@ -38,6 +38,7 @@ GameObject:
   - component: {fileID: 4537312439349456}
   - component: {fileID: 198870240256933104}
   - component: {fileID: 199987550558350714}
+  - component: {fileID: 114752785666547018}
   m_Layer: 0
   m_Name: Fire
   m_TagString: Untagged
@@ -122,6 +123,17 @@ Light:
   m_UseColorTemperature: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!114 &114752785666547018
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1473456446836306}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97a2e901d53d8134b9a2d28fe21fb676, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114994130719091320
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -192,7 +204,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: -383576448
+  randomSeed: -359798457
   InitialModule:
     serializedVersion: 3
     enabled: 1

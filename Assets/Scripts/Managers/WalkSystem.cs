@@ -456,6 +456,55 @@ public class WalkSystem {
 			region.build_graph ();
 
 			break;
+
+		case "bedroom":
+
+			region = new Region (
+				new Polygon(new List<Vector2>(){
+					new Vector2(3.8f, 3.12f),
+					new Vector2(3.8f, -2.39f),
+					new Vector2(-3.69f, -2.39f),
+					new Vector2(-3.69f, 0.96f),
+					new Vector2(-2.7f, 1.1f),
+					new Vector2(-1.64f, 1.76f),
+					new Vector2(-0.75f, 2.66f),
+					new Vector2(-0.39f, 3.12f),
+				}),
+				new List<Polygon>(){
+					new Polygon(new List<Vector2>(){
+						new Vector2(-0.193f, -1.302f),
+						new Vector2(2.262f, -1.818f),
+						new Vector2(3.24f, 2.09f),
+						new Vector2(0.61f, 2.72f),
+					})
+				},
+				Vector3.up,
+				Vector3.right,
+				0
+			);
+			region.build_graph ();
+
+			break;
+
+		case "corridor":
+
+			region = new Region (
+				new Polygon(new List<Vector2>(){
+					new Vector2(3.96f, 1.67f),
+					new Vector2(3.96f, -0.43f),
+					new Vector2(-4.04f, -0.43f),
+					new Vector2(-4.04f, 2.1f),
+					new Vector2(2.69f, 2.1f),
+					new Vector2(2.69f, 1.67f),
+				}),
+				new List<Polygon>(),
+				Vector3.up,
+				Vector3.right,
+				0
+			);
+			region.build_graph ();
+
+			break;
 		}
 	}
 

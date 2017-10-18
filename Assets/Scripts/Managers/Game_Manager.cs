@@ -69,7 +69,7 @@ public class Game_Manager {
 	Vector2 position; Vector3 player_position; float aspect = (Camera.main.pixelWidth / (float)Camera.main.pixelHeight); float radius = 0;
 
 	public void ChangeScene (string scene_name, Vector3 target) {
-		position = Camera.main.WorldToViewportPoint (Player_Manager.Instance.position + Vector3.up * 0.5f);
+		position = Camera.main.WorldToViewportPoint (Player_Manager.Instance.position + Vector3.up);
 		player_position = target;
 		radius = squared (Mathf.Max (aspect * position.x, aspect * (1 - position.x))) + squared (Mathf.Max (position.y, 1 - position.y));
 
@@ -83,6 +83,7 @@ public class Game_Manager {
 	void loadScene(){
 		if (target_scene != "") {
 			async = SceneManager.LoadSceneAsync (target_scene, LoadSceneMode.Single);
+			WalkSystem.Instance.Load_Region (target_scene);
 			target_scene = "";
 			async.allowSceneActivation = false;
 		} else if (async.progress < 0.9f) {
@@ -91,7 +92,7 @@ public class Game_Manager {
 			transition_timer = 1.25f;
 			load_locked = false;
 			async.allowSceneActivation = true;
-			position = Camera.main.WorldToViewportPoint (player_position + Vector3.up * 0.5f);
+			position = Camera.main.WorldToViewportPoint (player_position + Vector3.up);
 			Player_Manager.Instance.set_init_position (player_position);
 		}
 	}
