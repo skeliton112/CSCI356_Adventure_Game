@@ -167,7 +167,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1280620}
   m_LocalRotation: {x: 0.40821788, y: -0.23456968, z: 0.10938163, w: 0.8754261}
-  m_LocalPosition: {x: 0, y: 3, z: 0}
+  m_LocalPosition: {x: 0, y: 4.4300003, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -186,7 +186,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4026943108832980, guid: c6e60a02401597941a031962d1abf7ed, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -0.56
+      value: 0.8299999
       objectReference: {fileID: 0}
     - target: {fileID: 4026943108832980, guid: c6e60a02401597941a031962d1abf7ed, type: 2}
       propertyPath: m_LocalPosition.z
@@ -223,6 +223,41 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c6e60a02401597941a031962d1abf7ed, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &279818801 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 100002, guid: 14e795211e5dc4c248c767a7e63ad72a, type: 3}
+  m_PrefabInternal: {fileID: 357017314}
+--- !u!65 &279818804
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 279818801}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.1, y: 0.1, z: 0.1}
+  m_Center: {x: -0.2, y: 0.05, z: 0.08}
+--- !u!114 &279818805
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 279818801}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e19f604636480f24c85c1763bdd2a5a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue_data: {fileID: 4900000, guid: 7fa4e81733e5ef349bc4c41872ae687f, type: 3}
+  use_type: 3
+  object_name: Outside Door
+  object_id: Door_to_Kitchen
+  open_state: 0
+  target_scene: mainHouse
+  target_position: {x: 0, y: 0, z: 0}
+  door_id: 4
 --- !u!1001 &357017314
 Prefab:
   m_ObjectHideFlags: 0
@@ -236,7 +271,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 14e795211e5dc4c248c767a7e63ad72a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.44
+      value: -0.01000011
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 14e795211e5dc4c248c767a7e63ad72a, type: 3}
       propertyPath: m_LocalPosition.z
@@ -302,7 +337,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 14e795211e5dc4c248c767a7e63ad72a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.44
+      value: -0.01000008
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 14e795211e5dc4c248c767a7e63ad72a, type: 3}
       propertyPath: m_LocalPosition.z
@@ -363,6 +398,41 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 14e795211e5dc4c248c767a7e63ad72a, type: 3}
   m_IsPrefabParent: 0
+--- !u!1 &519687554 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 100002, guid: 14e795211e5dc4c248c767a7e63ad72a, type: 3}
+  m_PrefabInternal: {fileID: 519687553}
+--- !u!114 &519687555
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 519687554}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e19f604636480f24c85c1763bdd2a5a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue_data: {fileID: 4900000, guid: 7fa4e81733e5ef349bc4c41872ae687f, type: 3}
+  use_type: 3
+  object_name: Library Door
+  object_id: Door_to_library
+  open_state: 0
+  target_scene: library
+  target_position: {x: -4.137184, y: 0, z: 0.5298556}
+  door_id: 2
+--- !u!65 &519687556
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 519687554}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.1, y: 0.1, z: 0.1}
+  m_Center: {x: -0.15, y: 0.05, z: 0.08}
 --- !u!1 &565042270 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 100002, guid: 14e795211e5dc4c248c767a7e63ad72a, type: 3}
@@ -378,14 +448,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e19f604636480f24c85c1763bdd2a5a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogue_data: {fileID: 4900000, guid: 7fa4e81733e5ef349bc4c41872ae687f, type: 3}
-  use_type: 0
-  object_name: Door
+  dialogue_data: {fileID: 0}
+  use_type: 3
+  object_name: Bedroom Door
   object_id: Door_to_bedroom
   open_state: 0
   target_scene: bedroom
-  target_position: {x: 0, y: 0, z: 0}
-  door_id: 0
+  target_position: {x: -3.6, y: 0, z: 0.7}
+  door_id: 1
 --- !u!65 &565042272
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -411,7 +481,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 3a2193fa47ee647fcb349bfd3ccde91f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -6.43
+      value: -5
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 3a2193fa47ee647fcb349bfd3ccde91f, type: 3}
       propertyPath: m_LocalPosition.z
@@ -460,6 +530,41 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3a2193fa47ee647fcb349bfd3ccde91f, type: 3}
   m_IsPrefabParent: 0
+--- !u!1 &591055847 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 100002, guid: 14e795211e5dc4c248c767a7e63ad72a, type: 3}
+  m_PrefabInternal: {fileID: 1566789005}
+--- !u!114 &591055848
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 591055847}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e19f604636480f24c85c1763bdd2a5a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue_data: {fileID: 4900000, guid: 7fa4e81733e5ef349bc4c41872ae687f, type: 3}
+  use_type: 3
+  object_name: Kitchen Door
+  object_id: Door_to_Kitchen
+  open_state: 0
+  target_scene: kitchen
+  target_position: {x: 3.979684, y: 0, z: -0.1925987}
+  door_id: 3
+--- !u!65 &591055851
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 591055847}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.1, y: 0.1, z: 0.1}
+  m_Center: {x: -0.2, y: 0.05, z: 0.08}
 --- !u!1 &609427486
 GameObject:
   m_ObjectHideFlags: 0
@@ -537,7 +642,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 609427486}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -1.43, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 8.994924, y: -0.014313778, z: 7.3046722}
   m_Children: []
   m_Father: {fileID: 0}
@@ -609,7 +714,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: fd2d9ef2f3781440fb377b5858d0fdc6, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.14
+      value: 1.29
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: fd2d9ef2f3781440fb377b5858d0fdc6, type: 3}
       propertyPath: m_LocalPosition.z
@@ -786,7 +891,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 14e795211e5dc4c248c767a7e63ad72a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.44
+      value: -0.01000011
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 14e795211e5dc4c248c767a7e63ad72a, type: 3}
       propertyPath: m_LocalPosition.z
@@ -860,7 +965,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 14e795211e5dc4c248c767a7e63ad72a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.44
+      value: -0.01000011
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 14e795211e5dc4c248c767a7e63ad72a, type: 3}
       propertyPath: m_LocalPosition.z

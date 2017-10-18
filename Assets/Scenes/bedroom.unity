@@ -560,7 +560,7 @@ MonoBehaviour:
   object_id: door_bedroom
   open_state: 1
   target_scene: corridor
-  target_position: {x: 4, y: -1.43, z: 1}
+  target_position: {x: 4, y: 0, z: 1}
   door_id: 0
 --- !u!65 &983808749
 BoxCollider:
