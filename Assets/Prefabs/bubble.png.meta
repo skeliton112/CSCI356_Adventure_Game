@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 6c14241dfc6654e529f84463b0c3b107
-timeCreated: 1508218253
+timeCreated: 1508218811
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -34,15 +34,15 @@ TextureImporter:
     filterMode: -1
     aniso: 16
     mipBias: -1
-    wrapU: 1
-    wrapV: -1
+    wrapU: 0
+    wrapV: 0
     wrapW: -1
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
   spriteMode: 2
   spriteExtrude: 1
-  spriteMeshType: 1
+  spriteMeshType: 0
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
@@ -89,11 +89,11 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 2268
+        width: 2267
         height: 567
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
-      border: {x: 112, y: 30, z: 110, w: 28}
+      border: {x: 113, y: 111, z: 113, w: 111}
       outline: []
       physicsShape: []
       tessellationDetail: 0
