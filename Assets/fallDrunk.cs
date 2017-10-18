@@ -4,19 +4,26 @@ using UnityEngine;
 
 public class fallDrunk : MonoBehaviour {
 
-	public GameObject leftArm, rightArm, body, mask;
+	public GameObject body, mask;
 	public Character character;
 	float timer;
 	float duration;
 
-	Vector3 startPos; 
-	Vector3 endPos; 
-	float trajectoryHeight = 5; 
+	public Transform Target;
+	public float firingAngle = 45.0f;
+	public float gravity = 9.8f;
+
+	public Transform Projectile;      
+	private Transform myTransform;
+
+	void Awake() {
+
+		myTransform = transform; 
+	}
 	// Use this for initialization
 	void Start () {
-		Vector3 startPos = mask.transform.position; 
-		Vector3 endPos = mask.transform.position; 
-		Debug.Log (startPos); 
+		
+
 	}
 	
 	// Update is called once per frame
@@ -29,13 +36,37 @@ public class fallDrunk : MonoBehaviour {
 
 	void fallDrunkf() {
 
+		// Move projectile to the position of throwing object + add some offset if needed.
+		Projectile.position = myTransform.position + new Vector3(0, 0.0f, 0);
+
+		// Calculate distance to target
+		float target_Distance = Vector3.Distance(Projectile.position, Target.position);
+
+		// Calculate the velocity needed to throw the object to the target at specified angle.
+		float projectile_Velocity = target_Distance / (Mathf.Sin(2 * firingAngle * Mathf.Deg2Rad) / gravity);
+
+		// Extract the X  Y componenent of the velocity
+		float Vx = Mathf.Sqrt(projectile_Velocity) * Mathf.Cos(firingAngle * Mathf.Deg2Rad);
+		float Vy = Mathf.Sqrt(projectile_Velocity) * Mathf.Sin(firingAngle * Mathf.Deg2Rad);
+
+		// Calculate flight time.
+		float flightDuration = target_Distance / Vx;
+
+		// Rotate projectile to face the target.
+		Projectile.rotation = Quaternion.LookRotation(Target.position - Projectile.position);
+
+		float elapse_time = 0;
+
+		while (elapse_time < flightDuration)
+		{
+			Projectile.Translate(0, (Vy - (gravity * elapse_time)) * Time.deltaTime, Vx * Time.deltaTime);
+
+			elapse_time += Time.deltaTime;
 
 
+		}
 
-		//Vector3 currentPos = Vector3.Lerp (startPos, endPos, timer); '
-		Vector3 currentPos = mask.transform.position; 
-		currentPos.y += trajectoryHeight * Mathf.Sin(Mathf.Clamp01(timer) * Mathf.PI);
-		mask.transform.position = endPos;
+
 
 	//	Quaternion newRotation = Quaternion.AngleAxis (90, Vector3.right); 
 	//	body.transform.rotation = Quaternion.Slerp(body.transform.rotation, newRotation, timer);
