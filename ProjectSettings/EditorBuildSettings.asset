@@ -4,4 +4,34 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/bedroom.unity
+    guid: c174bc3b7f42041cd90d33c7906e7e3d
+  - enabled: 1
+    path: Assets/Scenes/corridor.unity
+    guid: fa6040d62e1354461817012a491d3872
+  - enabled: 1
+    path: Assets/Scenes/guardsAndGate.unity
+    guid: 6de2384f5771c446a85fbf640ac18562
+  - enabled: 1
+    path: Assets/Scenes/kitchen.unity
+    guid: a465a0c0510d4425081666942cb95053
+  - enabled: 1
+    path: Assets/Scenes/laundry inside.unity
+    guid: 6a9aacf5372d445139f9c9d8131f8b1a
+  - enabled: 1
+    path: Assets/Scenes/laundry.unity
+    guid: 6d01cdcc38619426eaa210444a8cbe50
+  - enabled: 1
+    path: Assets/Scenes/library.unity
+    guid: 21f5100e423e141979c418bc755681dc
+  - enabled: 1
+    path: Assets/Scenes/mainHouse.unity
+    guid: bb71be1e430ba4f7fa47dd0caa0fc5dd
+  - enabled: 1
+    path: Assets/Scenes/Outside Smith.unity
+    guid: 94c33ae2d53a5468a9e6e5f2dc097ac5
+  - enabled: 1
+    path: Assets/Scenes/shed.unity
+    guid: 93a0dddcf27db49058d10e2b4081136e
