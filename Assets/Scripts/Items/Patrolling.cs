@@ -19,12 +19,11 @@ public class Patrolling : MonoBehaviour {
 	private int currentPoint = 0;
 	private Vector3 target;
 	private Vector3 direction;
-	GameObject player;
+
 	Walker character;
 	animations animator;
 
 	void Start () {
-		player = GameObject.FindGameObjectWithTag("Player");
 		character = gameObject.GetComponent <Walker> ();
 		animator = gameObject.GetComponent <animations> ();
 		next_action ();

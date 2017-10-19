@@ -45,7 +45,7 @@ public class Walker : MonoBehaviour {
 	protected void Move () {
 		if(is_paused)
 			return;
-		if (waypoints.Count > 0) {
+		if (waypoints != null && waypoints.Count > 0) {
 			Vector3 direction = waypoints [0] - transform.position;
 			rotator.LookAt(waypoints[0]);
 			if (direction.sqrMagnitude > speed * Game_Manager.deltaTime * speed * Game_Manager.deltaTime) {

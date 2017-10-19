@@ -54,8 +54,10 @@
      <Compile Include="Assets\fallDrunk.cs" />
      <Compile Include="Assets\Scripts\Graphic Effects\Camera_Script.cs" />
      <Compile Include="Assets\Scripts\Graphic Effects\Outliner.cs" />
+     <Compile Include="Assets\Scripts\GUI Scripts\ButtonScript.cs" />
      <Compile Include="Assets\Scripts\GUI Scripts\Dialogue_Printer.cs" />
      <Compile Include="Assets\Scripts\GUI Scripts\Inventory_Item.cs" />
+     <Compile Include="Assets\Scripts\GUI Scripts\LoadScroll.cs" />
      <Compile Include="Assets\Scripts\Items\animations.cs" />
      <Compile Include="Assets\Scripts\Items\Clickable.cs" />
      <Compile Include="Assets\Scripts\Items\Door.cs" />
@@ -80,6 +82,7 @@
      <Compile Include="Assets\Scripts\Managers\WalkSystem.cs" />
      <Compile Include="Assets\Scripts\Test_Save_Call.cs" />
      <Compile Include="Assets\Scripts\Utility\enums.cs" />
+     <None Include="Assets\Saves\save.xml" />
      <None Include="Assets\XML\test.xml" />
      <None Include="Assets\XML\items_save.xml" />
      <None Include="Assets\Shaders\Combining_Shader.shader" />

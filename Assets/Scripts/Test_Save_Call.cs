@@ -21,10 +21,5 @@ public class Test_Save_Call : MonoBehaviour {
 		{
 			Game_Manager.Instance.Load();
 		}
-
-		if(Input.GetKeyDown("p"))
-		{
-			Game_Manager.Instance.PrintStates();
-		}
 	}
 }
