@@ -5,16 +5,13 @@
 			<NoItem>
 				<lines>
 					<Line>
-						<speaker>kitchen_hand</speaker>
-						<text>I can take this</text>
+						<speaker>pc</speaker>
+						<text>It's locked</text>
 						<speaker_action></speaker_action>
 					</Line>
 				</lines>
-				<state_change>1</state_change>
-				<inventory_change>
-					<type>give</type>
-					<item>pin</item>
-				</inventory_change>
+				<state_change>0</state_change>
+				<inventory_change xsi:nil="true" />
 			</NoItem>
 			
 			<Default>
@@ -35,7 +32,17 @@
 				<Conversation xsi:nil="true" /> <!-- coat -->
 				<Conversation xsi:nil="true" /> <!-- food -->
 				<Conversation xsi:nil="true" /> <!-- knife -->
-				<Conversation xsi:nil="true" /> <!-- pin -->
+				<Conversation> <!-- pin -->
+					<lines>
+						<Line>
+							<speaker>pc</speaker>
+							<text>Yes! I picked the lock</text>
+							<speaker_action></speaker_action>
+						</Line>
+					</lines>
+					<state_change>1</state_change>
+					<inventory_change xsi:nil="true" />
+				</Conversation>
 				<Conversation xsi:nil="true" /> <!-- sake -->
 				<Conversation xsi:nil="true" /> <!-- toy -->
 			</Items>

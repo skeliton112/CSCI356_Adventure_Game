@@ -93,8 +93,10 @@ public class GUI_Manager {
 		return false;
 	}
 
+	public bool finished_playing = false;
 	public void Change_Line (Line l){
 		Dialogue_Printer printer = dialogue.GetComponent <Dialogue_Printer> ();
+		finished_playing = false;
 		printer.Print (l);
 	}
 

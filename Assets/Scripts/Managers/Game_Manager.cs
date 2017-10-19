@@ -155,6 +155,10 @@ public class Game_Manager {
 		Advance_Conversation ();
 	}
 	private void Advance_Conversation () {
+		if (!GUI_Manager.Instance.finished_playing) {
+			GUI_Manager.Instance.finished_playing = true;
+			return;
+		}
 		current_line++;
 		if (current_line < conversation.lines.Length) {
 			GUI_Manager.Instance.Change_Line (conversation.lines [current_line]);
