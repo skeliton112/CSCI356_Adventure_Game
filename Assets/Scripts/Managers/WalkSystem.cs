@@ -505,6 +505,82 @@ public class WalkSystem {
 			region.build_graph ();
 
 			break;
+
+		case "mainHouse":
+
+			region = new Region (
+				new Polygon(new List<Vector2>(){
+					new Vector2(-9.03f, 1.85f),
+					new Vector2(-1.03f, 0.89f),
+					new Vector2( 1.03f, 0.89f),
+					new Vector2( 9.03f, 1.85f),
+					new Vector2( 9.03f, -3.25f),
+					new Vector2(-9.03f, -3.25f),
+				}),
+				new List<Polygon>(),
+				Vector3.up,
+				Vector3.right,
+				0
+			);
+			region.build_graph ();
+
+			break;
+
+		case "laundry":
+
+			region = new Region (
+				new Polygon(new List<Vector2>(){
+					new Vector2(-8.33f, -2.91f),
+					new Vector2(-8.33f,  4.89f),
+					new Vector2( 8.33f,  4.89f),
+					new Vector2( 8.33f, -2.91f),
+				}),
+				new List<Polygon>(),
+				Vector3.up,
+				Vector3.right,
+				0
+			);
+			region.build_graph ();
+
+			break;
+
+		case "shed":
+
+			region = new Region (
+				new Polygon(new List<Vector2>(){
+					new Vector2( 3.45f, 9.55f),
+					new Vector2( 3.45f, 7.23f),
+					new Vector2( 2.06f, 7.307f),
+					new Vector2(-3.87f, 4.59f),
+					new Vector2(-5.602f, 9.219f),
+					new Vector2(2.31f, 11.57f),
+				}),
+				new List<Polygon>(),
+				Vector3.up,
+				Vector3.right,
+				0
+			);
+			region.build_graph ();
+
+			break;
+
+		case "Outside Smith":
+
+			region = new Region (
+				new Polygon(new List<Vector2>(){
+					new Vector2( 3.50f, 3.38f),
+					new Vector2( 6.49f, 5.25f),
+					new Vector2( 6.49f,-2.35f),
+					new Vector2( 3.50f,-1.58f),
+				}),
+				new List<Polygon>(),
+				Vector3.up,
+				Vector3.right,
+				0
+			);
+			region.build_graph ();
+
+			break;
 		}
 	}
 

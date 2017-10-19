@@ -8,7 +8,6 @@ public class Door : Interactable {
 	public int open_state;
 	public string  target_scene;
 	public Vector3 target_position;
-	public int door_id;
 
 	public override void Use (int item_id) {
 		if (state == open_state && item_id < 0) {

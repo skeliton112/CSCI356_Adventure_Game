@@ -21,6 +21,8 @@ public class Game_Manager {
 
 	public void Update () { //Update loop
 
+		position = Camera.main.WorldToViewportPoint (Player_Manager.Instance.position + Vector3.up);
+
 		if (Input.GetMouseButtonDown (0) && game_state == Game_state.talking)
 			Advance_Conversation ();
 
@@ -81,6 +83,7 @@ public class Game_Manager {
 	}
 	AsyncOperation async;
 	void loadScene(){
+		GUI_Manager.Instance.UpdateText("");
 		if (target_scene != "") {
 			Debug.Log (target_scene);
 			async = SceneManager.LoadSceneAsync (target_scene, LoadSceneMode.Single);
@@ -93,7 +96,6 @@ public class Game_Manager {
 			transition_timer = 1.25f;
 			load_locked = false;
 			async.allowSceneActivation = true;
-			position = Camera.main.WorldToViewportPoint (player_position + Vector3.up);
 			Player_Manager.Instance.set_init_position (player_position);
 		}
 	}
@@ -215,6 +217,15 @@ public class Game_Manager {
 		target_scene = data.scene;
 
 		Debug.Log (target_scene);
+	}
+	public void New_Game () {
+		Player_Manager.Instance.items = new Item_state[12];
+		Character_Manager.Instance.states = new Dictionary<string, int>();
+
+		transition_timer = 1;
+		load_locked = true;
+		player_position = Vector3.zero;
+		target_scene = "bedroom";
 	}
 
 	//Singleton pattern

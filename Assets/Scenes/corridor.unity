@@ -271,7 +271,6 @@ MonoBehaviour:
   open_state: 0
   target_scene: mainHouse
   target_position: {x: 0, y: 0, z: 0}
-  door_id: 4
 --- !u!1001 &357017314
 Prefab:
   m_ObjectHideFlags: 0
@@ -285,7 +284,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 14e795211e5dc4c248c767a7e63ad72a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.01000011
+      value: -0.17000003
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 14e795211e5dc4c248c767a7e63ad72a, type: 3}
       propertyPath: m_LocalPosition.z
@@ -317,7 +316,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 14e795211e5dc4c248c767a7e63ad72a, type: 3}
       propertyPath: m_LocalScale.y
-      value: 13.409324
+      value: 18.115885
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 14e795211e5dc4c248c767a7e63ad72a, type: 3}
       propertyPath: m_LocalScale.z
@@ -351,7 +350,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 14e795211e5dc4c248c767a7e63ad72a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.01000008
+      value: -0.17
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 14e795211e5dc4c248c767a7e63ad72a, type: 3}
       propertyPath: m_LocalPosition.z
@@ -383,11 +382,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 14e795211e5dc4c248c767a7e63ad72a, type: 3}
       propertyPath: m_LocalScale.y
-      value: 13.409324
+      value: 18.115885
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 14e795211e5dc4c248c767a7e63ad72a, type: 3}
       propertyPath: m_LocalScale.z
-      value: 16.07789
+      value: 16.077906
       objectReference: {fileID: 0}
     - target: {fileID: 400008, guid: 14e795211e5dc4c248c767a7e63ad72a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -434,7 +433,6 @@ MonoBehaviour:
   open_state: 0
   target_scene: library
   target_position: {x: -4.137184, y: 0, z: 0.5298556}
-  door_id: 2
 --- !u!65 &519687556
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -469,7 +467,6 @@ MonoBehaviour:
   open_state: 0
   target_scene: bedroom
   target_position: {x: -3.6, y: 0, z: 0.7}
-  door_id: 1
 --- !u!65 &565042272
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -566,7 +563,6 @@ MonoBehaviour:
   open_state: 0
   target_scene: kitchen
   target_position: {x: 3.979684, y: 0, z: -0.1925987}
-  door_id: 3
 --- !u!65 &591055851
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -905,7 +901,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 14e795211e5dc4c248c767a7e63ad72a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.01000011
+      value: -0.17000003
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 14e795211e5dc4c248c767a7e63ad72a, type: 3}
       propertyPath: m_LocalPosition.z
@@ -937,11 +933,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 14e795211e5dc4c248c767a7e63ad72a, type: 3}
       propertyPath: m_LocalScale.y
-      value: 13.409324
+      value: 18.115885
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 14e795211e5dc4c248c767a7e63ad72a, type: 3}
       propertyPath: m_LocalScale.z
-      value: 16.07789
+      value: 16.077906
       objectReference: {fileID: 0}
     - target: {fileID: 400008, guid: 14e795211e5dc4c248c767a7e63ad72a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -979,7 +975,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 14e795211e5dc4c248c767a7e63ad72a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.01000011
+      value: -0.17000003
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 14e795211e5dc4c248c767a7e63ad72a, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1011,7 +1007,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 14e795211e5dc4c248c767a7e63ad72a, type: 3}
       propertyPath: m_LocalScale.y
-      value: 13.409324
+      value: 18.115885
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 14e795211e5dc4c248c767a7e63ad72a, type: 3}
       propertyPath: m_LocalScale.z

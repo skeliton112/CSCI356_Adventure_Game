@@ -7,6 +7,10 @@ public class LoadScroll : MonoBehaviour {
 
 	public GameObject button;
 
+	public void new_game () {
+		Game_Manager.Instance.New_Game ();
+	}
+
 	public void Refresh () {
 		string[] files;
 		files = Directory.GetFiles ("Assets/Saves");
