@@ -578,7 +578,7 @@ MonoBehaviour:
   object_id: constant
   open_state: 0
   target_scene: guardsAndGate
-  target_position: {x: 15.44, y: 0, z: 11.36}
+  target_position: {x: 8.83, y: 0, z: 5.74}
 --- !u!65 &832697522
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -638,7 +638,7 @@ MonoBehaviour:
   object_id: constant
   open_state: 0
   target_scene: Inside Smith
-  target_position: {x: 0, y: 0, z: 0}
+  target_position: {x: 1.67, y: 0, z: 1.254}
 --- !u!65 &937393361
 BoxCollider:
   m_ObjectHideFlags: 0

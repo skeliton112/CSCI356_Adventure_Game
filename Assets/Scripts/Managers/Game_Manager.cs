@@ -21,6 +21,8 @@ public class Game_Manager {
 
 	public void Update () { //Update loop
 
+		position = Camera.main.WorldToViewportPoint (Player_Manager.Instance.position + Vector3.up);
+
 		if (Input.GetMouseButtonDown (0) && game_state == Game_state.talking)
 			Advance_Conversation ();
 
@@ -81,6 +83,7 @@ public class Game_Manager {
 	}
 	AsyncOperation async;
 	void loadScene(){
+		GUI_Manager.Instance.UpdateText("");
 		if (target_scene != "") {
 			Debug.Log (target_scene);
 			async = SceneManager.LoadSceneAsync (target_scene, LoadSceneMode.Single);
@@ -93,7 +96,6 @@ public class Game_Manager {
 			transition_timer = 1.25f;
 			load_locked = false;
 			async.allowSceneActivation = true;
-			position = Camera.main.WorldToViewportPoint (player_position + Vector3.up);
 			Player_Manager.Instance.set_init_position (player_position);
 		}
 	}
@@ -115,9 +117,19 @@ public class Game_Manager {
 		get { return item; }
 	}
 	public void Select_Item (Item i){
-		item = i;
-		has_selection = true;
-		GUI_Manager.Instance.inventory_update ();
+		if (i == Item.fox_mask) {
+			Player_Manager.Instance.current_mask = 0;
+		} else if (i == Item.boar_mask) {
+			Player_Manager.Instance.current_mask = 1;
+		} else if (i == Item.ox_mask) {
+			Player_Manager.Instance.current_mask = 2;
+		} else if (i == Item.tiger_mask) {
+			Player_Manager.Instance.current_mask = 3;
+		} else {
+			item = i;
+			has_selection = true;
+			GUI_Manager.Instance.inventory_update ();
+		}
 	}
 	public void Deselect_Item () {
 		has_selection = false;
@@ -153,6 +165,10 @@ public class Game_Manager {
 		Advance_Conversation ();
 	}
 	private void Advance_Conversation () {
+		if (!GUI_Manager.Instance.finished_playing) {
+			GUI_Manager.Instance.finished_playing = true;
+			return;
+		}
 		current_line++;
 		if (current_line < conversation.lines.Length) {
 			GUI_Manager.Instance.Change_Line (conversation.lines [current_line]);
@@ -215,6 +231,15 @@ public class Game_Manager {
 		target_scene = data.scene;
 
 		Debug.Log (target_scene);
+	}
+	public void New_Game () {
+		Player_Manager.Instance.items = new Item_state[12];
+		Character_Manager.Instance.states = new Dictionary<string, int>();
+
+		transition_timer = 1;
+		load_locked = true;
+		player_position = Vector3.zero;
+		target_scene = "bedroom";
 	}
 
 	//Singleton pattern

@@ -27,12 +27,11 @@ public class Player_Manager {
 	Vector3 init_position = Vector3.zero;
 	public Item_state[] items = new Item_state[12];
 
+	public int current_mask;
+
 	public Vector3 position {
 		get {
-			if (player != null)
-				return player.position;
-			else
-				return Vector3.zero;
+			return player.position;
 		}
 	}
 	public Vector3 direction {

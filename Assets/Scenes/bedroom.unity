@@ -268,12 +268,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52e9857f648e66e4d964410a6ab88695, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &298201561 stripped
-MonoBehaviour:
-  m_PrefabParentObject: {fileID: 114326136671391308, guid: aa034d156940165449084e3bb5cf3056,
-    type: 2}
-  m_PrefabInternal: {fileID: 1782907215}
-  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 --- !u!1 &414465453 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 100000, guid: bac91d9dc82374f33b4811aeb6a41461, type: 3}
@@ -580,12 +574,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.02496184, y: 0.15962727, z: 0.081133515}
   m_Center: {x: -0.17101641, y: 0.029813651, z: 0.08749728}
---- !u!114 &1076812369 stripped
-MonoBehaviour:
-  m_PrefabParentObject: {fileID: 114027354329102346, guid: aa034d156940165449084e3bb5cf3056,
-    type: 2}
-  m_PrefabInternal: {fileID: 1782907215}
-  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 --- !u!1001 &1617963795
 Prefab:
   m_ObjectHideFlags: 0
@@ -733,20 +721,6 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1569495616175770, guid: aa034d156940165449084e3bb5cf3056, type: 2}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114195676804633180, guid: aa034d156940165449084e3bb5cf3056,
-        type: 2}
-      propertyPath: name_box
-      value: 
-      objectReference: {fileID: 1076812369}
-    - target: {fileID: 114195676804633180, guid: aa034d156940165449084e3bb5cf3056,
-        type: 2}
-      propertyPath: dialogue_box
-      value: 
-      objectReference: {fileID: 298201561}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: aa034d156940165449084e3bb5cf3056, type: 2}
   m_IsPrefabParent: 0

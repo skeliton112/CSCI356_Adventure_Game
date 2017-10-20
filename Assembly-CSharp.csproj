@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{CD806C32-4B8A-852F-1A8D-38A1BF2964CD}</ProjectGuid>
+    <ProjectGuid>{AD6354E8-0A11-1BB1-161C-51E07E0895EF}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -58,12 +58,14 @@
      <Compile Include="Assets\Scripts\GUI Scripts\Dialogue_Printer.cs" />
      <Compile Include="Assets\Scripts\GUI Scripts\Inventory_Item.cs" />
      <Compile Include="Assets\Scripts\GUI Scripts\LoadScroll.cs" />
+     <Compile Include="Assets\Scripts\GUI Scripts\Pause_Handler.cs" />
      <Compile Include="Assets\Scripts\Items\animations.cs" />
      <Compile Include="Assets\Scripts\Items\Clickable.cs" />
      <Compile Include="Assets\Scripts\Items\Door.cs" />
      <Compile Include="Assets\Scripts\Items\doorAnimation.cs" />
      <Compile Include="Assets\Scripts\Items\Flicker.cs" />
      <Compile Include="Assets\Scripts\Items\Interactable.cs" />
+     <Compile Include="Assets\Scripts\Items\modelSwapper.cs" />
      <Compile Include="Assets\Scripts\Items\onHoverLoad.cs" />
      <Compile Include="Assets\Scripts\Items\onHoverPlay.cs" />
      <Compile Include="Assets\Scripts\Items\particleSystemScript.cs" />
@@ -80,26 +82,21 @@
      <Compile Include="Assets\Scripts\Managers\Message_Pumper.cs" />
      <Compile Include="Assets\Scripts\Managers\Player_Manager.cs" />
      <Compile Include="Assets\Scripts\Managers\WalkSystem.cs" />
-     <Compile Include="Assets\Scripts\Test_Save_Call.cs" />
      <Compile Include="Assets\Scripts\Utility\enums.cs" />
      <None Include="Assets\Saves\save.xml" />
-     <None Include="Assets\XML\test.xml" />
-     <None Include="Assets\XML\items_save.xml" />
      <None Include="Assets\Shaders\Combining_Shader.shader" />
-     <None Include="Assets\XML\CookBoy.xml" />
-     <None Include="Assets\XML\character_states_saves.xml" />
      <None Include="Assets\Shaders\Water.shader" />
      <None Include="Assets\XML\Door.xml" />
      <None Include="Assets\Shaders\Render_normals.shader" />
      <None Include="Assets\Shaders\Sobel.shader" />
-     <None Include="Assets\XML\LazyGuard.xml" />
      <None Include="Assets\XML\Pin.xml" />
+     <None Include="Assets\XML\CookBoy.xml" />
+     <None Include="Assets\Shaders\ScrollingMask.shader" />
      <None Include="Assets\Materials\Cel\UI-Default-No-Alpha.shader" />
      <None Include="Assets\Shaders\Smoke.shader" />
-     <None Include="Assets\XML\test_region.xml" />
+     <None Include="Assets\XML\Groundskeeper.xml" />
      <None Include="Assets\Shaders\textured_cel.shader" />
      <None Include="Assets\Shaders\cel.shader" />
-     <None Include="Assets\XML\Cook Assistant.xml" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>

@@ -96,7 +96,7 @@
                 SHADOW_COORDS(1)
                 float4 pos : SV_POSITION;
 				float2 uv : TEXCOORD0;
-                fixed3 worldPos : TEXCOORD1;
+                fixed3 worldPos : TEXCOORD2;
             };
 
             v2f vert (appdata v)
