@@ -29,7 +29,10 @@ public class Player_Manager {
 
 	public Vector3 position {
 		get {
-			return player.position;
+			if (player != null)
+				return player.position;
+			else
+				return Vector3.zero;
 		}
 	}
 	public Vector3 direction {

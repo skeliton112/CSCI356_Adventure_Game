@@ -168,7 +168,7 @@
 				<Conversation xsi:nil="true" /> <!-- knife -->
 				<Conversation xsi:nil="true" /> <!-- pin -->
 				<Conversation xsi:nil="true" /> <!-- sake -->
-				<Conversation xsi:nil="true">
+				<Conversation>
 					<lines>
 						<Line>
 							<speaker>kitchen_hand</speaker>
