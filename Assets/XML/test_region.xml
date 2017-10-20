@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<Region xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <boundary>
+    <verts>
+      <Vector2>
+        <x>-1.2</x>
+        <y>-4.5</y>
+      </Vector2>
+      <Vector2>
+        <x>-1.2</x>
+        <y>-3.5</y>
+      </Vector2>
+      <Vector2>
+        <x>-2.5</x>
+        <y>-3.5</y>
+      </Vector2>
+      <Vector2>
+        <x>-2.5</x>
+        <y>-1</y>
+      </Vector2>
+      <Vector2>
+        <x>-4.5</x>
+        <y>-1</y>
+      </Vector2>
+      <Vector2>
+        <x>-4.5</x>
+        <y>4.5</y>
+      </Vector2>
+      <Vector2>
+        <x>4.5</x>
+        <y>4.5</y>
+      </Vector2>
+      <Vector2>
+        <x>4.5</x>
+        <y>-4.5</y>
+      </Vector2>
+    </verts>
+  </boundary>
+  <holes />
+  <normal>
+    <x>0</x>
+    <y>1</y>
+    <z>0</z>
+  </normal>
+  <right>
+    <x>1</x>
+    <y>0</y>
+    <z>0</z>
+  </right>
+  <constant>0</constant>
+</Region>

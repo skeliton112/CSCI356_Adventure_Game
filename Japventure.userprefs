@@ -1,34 +1,30 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Managers\WalkSystem.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Items\Patrolling.cs">
     <Files>
       <File FileName="Assets\Scripts\Managers\Dialogue_Manager.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Managers\WalkSystem.cs" Line="445" Column="29" />
+      <File FileName="Assets\Scripts\Managers\WalkSystem.cs" Line="1" Column="1" />
       <File FileName="Assets\Shaders\cel.shader" Line="1" Column="1" />
       <File FileName="Assets\Shaders\Smoke.shader" Line="1" Column="1" />
       <File FileName="Assets\Scripts\Managers\Player_Manager.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\Managers\Message_Pumper.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Managers\Game_Manager.cs" Line="160" Column="11" />
-      <File FileName="Assets\Scripts\Managers\GUI_Manager.cs" Line="98" Column="10" />
+      <File FileName="Assets\Scripts\Managers\Game_Manager.cs" Line="217" Column="28" />
+      <File FileName="Assets\Scripts\Managers\GUI_Manager.cs" Line="1" Column="1" />
       <File FileName="Assets\Shaders\Water.shader" Line="1" Column="1" />
       <File FileName="Assets\Scripts\Graphic Effects\Outliner.cs" Line="1" Column="1" />
       <File FileName="Assets\Shaders\Combining_Shader.shader" Line="1" Column="1" />
       <File FileName="Assets\Scripts\Graphic Effects\Camera_Script.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Items\Walker.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Items\Patrolling.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Items\Walker.cs" Line="48" Column="28" />
+      <File FileName="Assets\Scripts\Items\Patrolling.cs" Line="26" Column="17" />
       <File FileName="Assets\Scripts\Items\animations.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Utility\enums.cs" Line="4" Column="24" />
+      <File FileName="Assets\Scripts\Utility\enums.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\Items\Door.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\Items\Flicker.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\Items\particleSystemScript.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\GUI Scripts\LoadScroll.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\GUI Scripts\ButtonScript.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Managers\Character_Manager.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\GUI Scripts\Pause_Handler.cs" Line="1" Column="1" />
-      <File FileName="Assets\Shaders\ScrollingMask.shader" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Items\Interactable.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Items\Clickable.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\GUI Scripts\Dialogue_Printer.cs" Line="26" Column="20" />
+      <File FileName="Assets\Scripts\GUI Scripts\LoadScroll.cs" Line="19" Column="71" />
+      <File FileName="Assets\Scripts\GUI Scripts\ButtonScript.cs" Line="9" Column="2" />
+      <File FileName="Assets\Scripts\Managers\Character_Manager.cs" Line="8" Column="15" />
+      <File FileName="Assets\Scripts\Test_Save_Call.cs" Line="23" Column="4" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
