@@ -38,6 +38,3 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/shed.unity
     guid: 93a0dddcf27db49058d10e2b4081136e
-  - enabled: 1
-    path: Assets/Scenes/Inside Smith.unity
-    guid: 0c049590024eeb34ba6b91eb3e79f0be
