@@ -869,12 +869,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1031157649351760}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3109c000bee9c90439aca4209fd39daf, type: 3}
+  m_Script: {fileID: 11500000, guid: 3224928ca15b81b49aa9a5cc2f758c88, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pauseMenu: {fileID: 1071664034232614}
-  normalGUI1: {fileID: 1631087760406088}
-  normalGUI2: {fileID: 1569495616175770}
+  name_box: {fileID: 0}
+  dialogue_box: {fileID: 0}
 --- !u!114 &114201800570142836
 MonoBehaviour:
   m_ObjectHideFlags: 1
