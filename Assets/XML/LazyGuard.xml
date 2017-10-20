@@ -5,43 +5,13 @@
 			<NoItem>
 				<lines>
 					<Line>
-						<speaker>kitchen_hand</speaker>
-						<text>Hey! How did you get out!</text>
+						<speaker>lazy_guard</speaker>
+						<text>Being a guard is so boring|.|.|.| I wish I could run around like you.</text>
 						<speaker_action></speaker_action>
 					</Line>
 					<Line>
-						<speaker>pc</speaker>
-						<text>Doesn’t matter, I need to escape the palace!</text>
-						<speaker_action></speaker_action>
-					</Line>
-					<Line>
-						<speaker>pc</speaker>
-						<text>The Onibaba is going to eat me!</text>
-						<speaker_action></speaker_action>
-					</Line>
-					<Line>
-						<speaker>kitchen_hand</speaker>
-						<text>Hmmmm|.|.|.| I have an idea!</text>
-						<speaker_action></speaker_action>
-					</Line>
-					<Line>
-						<speaker>kitchen_hand</speaker>
-						<text>If you look like a guard you no one will stop you from leaving palace grounds</text>
-						<speaker_action></speaker_action>
-					</Line>
-					<Line>
-						<speaker>pc</speaker>
-						<text>How am I supposed to do that? I'm only a kid.</text>
-						<speaker_action></speaker_action>
-					</Line>
-					<Line>
-						<speaker>kitchen_hand</speaker>
-						<text>If you had guard's uniform and mask I'm sure you could pull it off.</text>
-						<speaker_action></speaker_action>
-					</Line>
-					<Line>
-						<speaker>kitchen_hand</speaker>
-						<text>Oh!||| You'll need stilts too.  You're way to short to be a guard.</text>
+						<speaker>lazy_guard</speaker>
+						<text>I could really use a drink.</text>
 						<speaker_action></speaker_action>
 					</Line>
 				</lines>
@@ -77,28 +47,8 @@
 			<NoItem>
 				<lines>
 					<Line>
-						<speaker>pc</speaker>
-						<text>Can I have your mask?</text>
-						<speaker_action></speaker_action>
-					</Line>
-					<Line>
-						<speaker>kitchen_hand</speaker>
-						<text>Ok, you can have it. But you'll have to do something for me first!</text>
-						<speaker_action></speaker_action>
-					</Line>
-					<Line>
-						<speaker>pc</speaker>
-						<text>Like what?</text>
-						<speaker_action></speaker_action>
-					</Line>
-					<Line>
-						<speaker>kitchen_hand</speaker>
-						<text>I'll give it to you for one of your toys.</text>
-						<speaker_action></speaker_action>
-					</Line>
-					<Line>
-						<speaker>kitchen_hand</speaker>
-						<text>I never get given any toys...</text>
+						<speaker>lazy_guard</speaker>
+						<text>I’d let you out, but those other guards would yell at me.</text>
 						<speaker_action></speaker_action>
 					</Line>
 				</lines>
@@ -125,7 +75,25 @@
 				<Conversation xsi:nil="true" /> <!-- food -->
 				<Conversation xsi:nil="true" /> <!-- knife -->
 				<Conversation xsi:nil="true" /> <!-- pin -->
-				<Conversation xsi:nil="true" /> <!-- sake -->
+				<Conversation>
+					<lines>
+						<Line>
+							<speaker>lazy_guard</speaker>
+							<text>Oh wow. Maybe I’ll finally have some fun.</text>
+							<speaker_action></speaker_action>
+						</Line>
+						<Line>
+							<speaker>lazy_guard</speaker>
+							<text>*glug*||| *glug*||| *glug*</text>
+							<speaker_action></speaker_action>
+						</Line>
+					</lines>
+					<state_change>3</state_change>
+					<inventory_change>
+						<type>take</type>
+						<item>toy</item>
+					</inventory_change>
+				</Conversation> <!-- sake -->
 				<Conversation xsi:nil="true" /> <!-- toy -->
 			</Items>
 		</Dialogue>
@@ -134,17 +102,17 @@
 			<NoItem>
 				<lines>
 					<Line>
-						<speaker>pc</speaker>
-						<text>Can I have your mask?</text>
+						<speaker>lazy_guard</speaker>
+						<text>Being a guard is so boring|.|.|.| I wish I could run around like you.</text>
 						<speaker_action></speaker_action>
 					</Line>
 					<Line>
-						<speaker>kitchen_hand</speaker>
-						<text>I told you, give me one of your toys and you can have it.</text>
+						<speaker>lazy_guard</speaker>
+						<text>I could really use a drink.</text>
 						<speaker_action></speaker_action>
 					</Line>
 				</lines>
-				<state_change>2</state_change>
+				<state_change>1</state_change>
 				<inventory_change xsi:nil="true" />
 			</NoItem>
 			
@@ -167,26 +135,26 @@
 				<Conversation xsi:nil="true" /> <!-- food -->
 				<Conversation xsi:nil="true" /> <!-- knife -->
 				<Conversation xsi:nil="true" /> <!-- pin -->
-				<Conversation xsi:nil="true" /> <!-- sake -->
 				<Conversation>
 					<lines>
 						<Line>
-							<speaker>kitchen_hand</speaker>
-							<text>Thanks!</text>
+							<speaker>lazy_guard</speaker>
+							<text>Oh wow. Maybe I’ll finally have some fun.</text>
 							<speaker_action></speaker_action>
 						</Line>
 						<Line>
-							<speaker>kitchen_hand</speaker>
-							<text>You can have the mask, like I’d ever want to go back to the kitchen now anyway.</text>
+							<speaker>lazy_guard</speaker>
+							<text>*glug*||| *glug*||| *glug*</text>
 							<speaker_action></speaker_action>
 						</Line>
 					</lines>
-					<state_change>0</state_change>
+					<state_change>3</state_change>
 					<inventory_change>
 						<type>take</type>
 						<item>toy</item>
 					</inventory_change>
-				</Conversation><!-- toy -->
+				</Conversation> <!-- sake -->
+				<Conversation xsi:nil="true" /> <!-- toy -->
 			</Items>
 		</Dialogue>
 	</dialogues>

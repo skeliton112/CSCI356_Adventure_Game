@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.4512524, g: 0.50002533, b: 0.56849414, a: 1}
+  m_IndirectSpecularColor: {r: 0.4488387, g: 0.49890232, b: 0.57569635, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -561,7 +561,6 @@ MonoBehaviour:
   open_state: 1
   target_scene: corridor
   target_position: {x: 4, y: 0, z: 1}
-  door_id: 0
 --- !u!65 &983808749
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -953,10 +952,10 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2011555416}
-  m_LocalRotation: {x: 0.34942025, y: -0.38485312, z: -0.19241352, w: 0.83232844}
+  m_LocalRotation: {x: 0.3601181, y: -0.45669687, z: 0.11249837, w: 0.8056594}
   m_LocalPosition: {x: 0, y: 3, z: -1.15}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 7
-  m_LocalEulerAnglesHint: {x: 25.694002, y: -59.335003, z: -40.837}
+  m_LocalEulerAnglesHint: {x: 43.08, y: -63.712, z: -11.663}
